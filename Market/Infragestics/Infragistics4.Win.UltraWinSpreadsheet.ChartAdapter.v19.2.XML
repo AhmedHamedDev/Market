@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infragistics4.Win.UltraWinSpreadsheet.ChartAdapter.v19.2</name>
+    </assembly>
+    <members>
+        <member name="T:Infragistics.Controls.Grids.SpreadsheetChartAdapter">
+            <summary>
+            Creates and initializes chart elements for the spreadsheet based on a <see cref="T:Infragistics.Documents.Excel.WorksheetChart"/> instance.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Controls.Grids.SpreadsheetChartAdapter.#ctor">
+            <summary>
+            Creates a new instance of SpreadsheetChartAdapter.
+            </summary>
+        </member>
+    </members>
+</doc>
