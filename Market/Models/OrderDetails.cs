@@ -10,7 +10,8 @@ namespace Market.Models
     {
         public int OrderDetailsId { get; set; }
         public int Quantity { get; set; }
-        public decimal Price { get; set; }
+        public decimal CostPrice { get; set; }
+        public decimal SellPrice { get; set; }
         public DateTime InsertTime { get; set; }
 
         public int ProductTypeId { get; set; }

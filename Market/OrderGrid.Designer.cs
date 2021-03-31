@@ -39,6 +39,7 @@ namespace Market
             Infragistics.Win.ValueListItem valueListItem4 = new Infragistics.Win.ValueListItem();
             this.OrdersDataGrid = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExtractData = new System.Windows.Forms.Button();
             this.radioAll = new System.Windows.Forms.RadioButton();
             this.radioWithoutDelivery = new System.Windows.Forms.RadioButton();
             this.radioDelivery = new System.Windows.Forms.RadioButton();
@@ -64,7 +65,6 @@ namespace Market
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtboxOrderNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExtractData = new System.Windows.Forms.Button();
             this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -141,6 +141,21 @@ namespace Market
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1378, 291);
             this.panel1.TabIndex = 0;
+            // 
+            // btnExtractData
+            // 
+            this.btnExtractData.BackColor = System.Drawing.Color.Crimson;
+            this.btnExtractData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExtractData.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnExtractData.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnExtractData.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnExtractData.Location = new System.Drawing.Point(38, 173);
+            this.btnExtractData.Name = "btnExtractData";
+            this.btnExtractData.Size = new System.Drawing.Size(229, 45);
+            this.btnExtractData.TabIndex = 57;
+            this.btnExtractData.Text = "ارسال البيانات";
+            this.btnExtractData.UseVisualStyleBackColor = false;
+            this.btnExtractData.Click += new System.EventHandler(this.btnExtractData_Click);
             // 
             // radioAll
             // 
@@ -248,7 +263,7 @@ namespace Market
             this.btnDetails.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnDetails.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDetails.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDetails.Location = new System.Drawing.Point(135, 231);
+            this.btnDetails.Location = new System.Drawing.Point(150, 224);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(117, 45);
             this.btnDetails.TabIndex = 49;
@@ -458,7 +473,7 @@ namespace Market
             this.btnSearch.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSearch.Location = new System.Drawing.Point(23, 231);
+            this.btnSearch.Location = new System.Drawing.Point(38, 224);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(93, 45);
             this.btnSearch.TabIndex = 3;
@@ -489,21 +504,6 @@ namespace Market
             this.label1.Size = new System.Drawing.Size(171, 56);
             this.label1.TabIndex = 3;
             this.label1.Text = "رقم الاوردر :";
-            // 
-            // btnExtractData
-            // 
-            this.btnExtractData.BackColor = System.Drawing.Color.Crimson;
-            this.btnExtractData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExtractData.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.btnExtractData.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnExtractData.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExtractData.Location = new System.Drawing.Point(23, 180);
-            this.btnExtractData.Name = "btnExtractData";
-            this.btnExtractData.Size = new System.Drawing.Size(229, 45);
-            this.btnExtractData.TabIndex = 57;
-            this.btnExtractData.Text = "استخراج ملف";
-            this.btnExtractData.UseVisualStyleBackColor = false;
-            this.btnExtractData.Click += new System.EventHandler(this.btnExtractData_Click);
             // 
             // OrderGrid
             // 

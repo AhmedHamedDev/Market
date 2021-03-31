@@ -47,6 +47,7 @@ namespace Market
             this.OrderDetailsDataGrid.DisplayLayout.Bands[0].Columns[2].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
             this.OrderDetailsDataGrid.DisplayLayout.Bands[0].Columns[3].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
             this.OrderDetailsDataGrid.DisplayLayout.Bands[0].Columns[4].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+            this.OrderDetailsDataGrid.DisplayLayout.Bands[0].Columns[5].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
 
             // first column as checkbox
             UltraGridColumn ugc = OrderDetailsDataGrid.DisplayLayout.Bands[0].Columns["Selected"];
@@ -100,6 +101,14 @@ namespace Market
             productTypeNameColumn.ReadOnly = true;
             productTypeNameColumn.Unique = false;
 
+            DataColumn costPriceColumn = new DataColumn();
+            costPriceColumn = new DataColumn();
+            costPriceColumn.DataType = System.Type.GetType("System.Decimal");
+            costPriceColumn.ColumnName = "CostPrice";
+            costPriceColumn.Caption = "سعر التكلفه";
+            costPriceColumn.ReadOnly = true;
+            costPriceColumn.Unique = false;
+
             DataColumn sellPriceColumn = new DataColumn();
             sellPriceColumn = new DataColumn();
             sellPriceColumn.DataType = System.Type.GetType("System.Decimal");
@@ -126,6 +135,7 @@ namespace Market
 
             myDataTable.Columns.Add(selectedColumn);
             myDataTable.Columns.Add(productTypeNameColumn);
+            myDataTable.Columns.Add(costPriceColumn);
             myDataTable.Columns.Add(sellPriceColumn);
             myDataTable.Columns.Add(quantityColumn);
             myDataTable.Columns.Add(totalColumn);
@@ -193,7 +203,7 @@ namespace Market
                     return;
                 }
 
-                if (product.Quantity != 0 && product.Quantity < Quantity)
+                if (product.Quantity < Quantity)
                 {
                     MessageBox.Show("الكميه التى ادخلتها اكبر من الكميه المتاحه", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -202,28 +212,28 @@ namespace Market
                 var old = Order.OrderDetails.FirstOrDefault(x => x.ProductType.TypeName == product.TypeName);
                 if (old == null)
                 {
-                    this.Order.OrderDetails.Add(new OrderDetails() { Price = product.SellPrice, Quantity = Quantity, InsertTime = DateTime.Now, ProductType = product, ProductTypeId = product.ProductTypeId });
-                    this.myDataTable.Rows.Add(false, product.TypeName, product.SellPrice, Quantity, Quantity * product.SellPrice);
+                    this.Order.OrderDetails.Add(new OrderDetails() { CostPrice = product.CostPrice, SellPrice = product.SellPrice, Quantity = Quantity, InsertTime = DateTime.Now, ProductType = product, ProductTypeId = product.ProductTypeId });
+                    this.myDataTable.Rows.Add(false, product.TypeName, product.CostPrice, product.SellPrice, Quantity, Quantity * product.SellPrice);
                     
                 }
                 else
                 {
                     old.Quantity += Quantity;
 
-                    this.myDataTable.Columns[3].ReadOnly = false;
                     this.myDataTable.Columns[4].ReadOnly = false;
+                    this.myDataTable.Columns[5].ReadOnly = false;
 
                     foreach (var row in OrderDetailsDataGrid.Rows)
                     {
                         if(row.Cells[1].Value.ToString() == product.TypeName)
                         {
-                            row.Cells[3].Value = old.Quantity;
-                            row.Cells[4].Value = old.Quantity * old.Price;
+                            row.Cells[4].Value = old.Quantity;
+                            row.Cells[5].Value = old.Quantity * old.SellPrice;
                         }
                     }
 
-                    this.myDataTable.Columns[3].ReadOnly = true;
                     this.myDataTable.Columns[4].ReadOnly = true;
+                    this.myDataTable.Columns[5].ReadOnly = true;
 
                 }
 
@@ -253,7 +263,7 @@ namespace Market
                 {
                     var productToDelete = Order.OrderDetails.FirstOrDefault(x => x.ProductType.TypeName == selectedRow.Cells[1].Value.ToString());
                     var product = ProductTypes.FirstOrDefault(x => x.ProductTypeId == productToDelete.ProductTypeId);
-                    product.Quantity += int.Parse(selectedRow.Cells[3].Value.ToString());
+                    product.Quantity += int.Parse(selectedRow.Cells[4].Value.ToString());
                     LableAvailableQuantity.Text = product.Quantity.ToString();
                     Order.OrderDetails.Remove(productToDelete);
                     OrderDetailsDataGrid.Rows[selectedRow.Index].Delete();
@@ -288,7 +298,7 @@ namespace Market
             decimal sum = 0;
             foreach (var item in Order.OrderDetails)
             {
-                sum += item.Price * item.Quantity;
+                sum += item.SellPrice * item.Quantity;
             }
 
             if (checkBoxIsDelivery.Checked && comboClient.SelectedItem != null)
@@ -376,6 +386,11 @@ namespace Market
                 }
 
                 Order.TotalSell = CalcTotal();
+
+                foreach (var item in Order.OrderDetails)
+                {
+                    item.ProductType = null;
+                }
 
                 btnSaveOrder.Enabled = false;
                 await Task.Run(() =>

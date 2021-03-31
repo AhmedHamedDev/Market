@@ -42,6 +42,7 @@ namespace Market
             this.OrderDetailsDataGrid.DisplayLayout.Bands[0].Columns[3].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
             this.OrderDetailsDataGrid.DisplayLayout.Bands[0].Columns[4].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
             this.OrderDetailsDataGrid.DisplayLayout.Bands[0].Columns[5].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+            this.OrderDetailsDataGrid.DisplayLayout.Bands[0].Columns[6].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
 
             // stop confirmation message on delete
             OrderDetailsDataGrid.DisplayLayout.ShowDeleteRowsPrompt = false;
@@ -68,6 +69,14 @@ namespace Market
             quantityColumn.Caption = "الكميه";
             quantityColumn.ReadOnly = true;
             quantityColumn.Unique = false;
+
+            DataColumn costPriceColumn = new DataColumn();
+            costPriceColumn = new DataColumn();
+            costPriceColumn.DataType = System.Type.GetType("System.Decimal");
+            costPriceColumn.ColumnName = "CostPrice";
+            costPriceColumn.Caption = "سعر التكلفه";
+            costPriceColumn.ReadOnly = true;
+            costPriceColumn.Unique = false;
 
             DataColumn sellPriceColumn = new DataColumn();
             sellPriceColumn = new DataColumn();
@@ -105,6 +114,7 @@ namespace Market
 
             myDataTable.Columns.Add(productNameColumn);
             myDataTable.Columns.Add(quantityColumn);
+            myDataTable.Columns.Add(costPriceColumn);
             myDataTable.Columns.Add(sellPriceColumn);
             myDataTable.Columns.Add(generalTypeColumn);
             myDataTable.Columns.Add(totalColumn);
@@ -120,10 +130,11 @@ namespace Market
                 DataRow theDataRow = myDataTable.NewRow();
                 theDataRow[0] = orderDetail.ProductType.TypeName;
                 theDataRow[1] = orderDetail.Quantity;
-                theDataRow[2] = orderDetail.Price;
-                theDataRow[3] = orderDetail.ProductType.GeneralProductTypes.Name;
-                theDataRow[4] = orderDetail.Quantity * orderDetail.Price;
-                theDataRow[5] = orderDetail.InsertTime;
+                theDataRow[2] = orderDetail.CostPrice;
+                theDataRow[3] = orderDetail.SellPrice;
+                theDataRow[4] = orderDetail.ProductType.GeneralProductTypes.Name;
+                theDataRow[5] = orderDetail.Quantity * orderDetail.SellPrice;
+                theDataRow[6] = orderDetail.InsertTime;
                 myDataTable.Rows.Add(theDataRow);
             }
 

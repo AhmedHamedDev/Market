@@ -5,10 +5,14 @@ using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -264,7 +268,7 @@ namespace Market
 
             if (radioDelivery.Checked)
                 filterd = filterd.Where(x => x.IsDelivery == true).ToList();
-            else if(radioWithoutDelivery.Checked)
+            else if (radioWithoutDelivery.Checked)
                 filterd = filterd.Where(x => x.IsDelivery == false).ToList();
 
             if (From.Year > 1900)
@@ -276,14 +280,14 @@ namespace Market
             if (!string.IsNullOrWhiteSpace(orderNumber))
                 filterd = filterd.Where(x => x.OrderNumber.Contains(orderNumber)).ToList();
 
-            if(ClientId != 0)
+            if (ClientId != 0)
                 filterd = filterd.Where(x => x.ClientId == ClientId).ToList();
 
             if (VillageId != 0)
                 filterd = filterd.Where(x => x.Client.VillageId == VillageId).ToList();
 
             if (ProductTypeId != 0)
-                filterd = filterd.Where(x => x.OrderDetails.Where(y=>y.ProductTypeId == ProductTypeId).Count() > 0).ToList();
+                filterd = filterd.Where(x => x.OrderDetails.Where(y => y.ProductTypeId == ProductTypeId).Count() > 0).ToList();
 
             if (GeneralProductTypeId != 0)
                 filterd = filterd.Where(x => x.OrderDetails.Where(y => y.ProductType.GeneralProductTypeId == GeneralProductTypeId).Count() > 0).ToList();
@@ -308,7 +312,7 @@ namespace Market
             {
                 foreach (var item in order.OrderDetails)
                 {
-                    sum += item.Price * item.Quantity;
+                    sum += item.SellPrice * item.Quantity;
                 }
 
                 if (order.IsDelivery)
@@ -321,13 +325,55 @@ namespace Market
             return sum;
         }
 
-        private void btnExtractData_Click(object sender, EventArgs e)
+        private async void btnExtractData_Click(object sender, EventArgs e)
         {
-            btnExtractData.Enabled = false;
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            this.ultraGridExcelExporter1.Export(this.OrdersDataGrid, path+"\\Orders "+DateTime.Now.ToString("dd-MM-yyyy")+".xls");
-            btnExtractData.Enabled = true;
-            MessageBox.Show("تم استخراج الملف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                btnExtractData.Enabled = false;
+                btnExtractData.Text = "انتظر";
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string fullPath = path + "\\Orders " + DateTime.Now.ToString("dd-MM-yyyy") + ".xls";
+                this.ultraGridExcelExporter1.Export(this.OrdersDataGrid, fullPath);
+
+                using(var SmtpServer = new SmtpClient("smtp.gmail.com"))
+                {
+                    using (var mail = new MailMessage())
+                    {
+                        mail.From = new MailAddress("ahmedhamed111111111@gmail.com");
+                        mail.To.Add(ConfigurationManager.AppSettings["ToEmail"]);
+                        mail.Subject = "المبيعات";
+
+                        System.Net.Mail.Attachment attachment;
+                        attachment = new System.Net.Mail.Attachment(fullPath);
+                        mail.Attachments.Add(attachment);
+
+                        SmtpServer.Port = 587;
+                        SmtpServer.Credentials = new System.Net.NetworkCredential("ahmedhamed111111111@gmail.com", "aha_168199600");
+                        SmtpServer.EnableSsl = true;
+
+                        SmtpServer.Send(mail);
+
+                        attachment.Dispose();
+                    }
+                }
+
+                await Task.Run(() =>
+                {
+                    Thread.Sleep(10000);
+                    File.Delete(fullPath);
+                });
+
+                btnExtractData.Text = "ارسال البيانات";
+                btnExtractData.Enabled = true;
+                MessageBox.Show("تم ارسال البيانات بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception exp)
+            {
+                btnExtractData.Text = "ارسال البيانات";
+                btnExtractData.Enabled = true;
+                MessageBox.Show("عذرا حدث خطأ ما", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

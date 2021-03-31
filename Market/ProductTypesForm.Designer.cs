@@ -54,7 +54,6 @@ namespace Market
             // 
             // btnSubmit
             // 
-            this.btnSubmit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = true;
