@@ -222,7 +222,7 @@ namespace Market
             this.comboClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboClient.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
             this.comboClient.Font = new System.Drawing.Font("Cairo", 10.8F);
-            this.comboClient.Location = new System.Drawing.Point(459, 15);
+            this.comboClient.Location = new System.Drawing.Point(459, 11);
             this.comboClient.Name = "comboClient";
             this.comboClient.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboClient.Size = new System.Drawing.Size(252, 44);
@@ -236,7 +236,7 @@ namespace Market
             this.clientLable.Font = new System.Drawing.Font("Cairo", 18F);
             this.clientLable.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.clientLable.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.clientLable.Location = new System.Drawing.Point(717, 2);
+            this.clientLable.Location = new System.Drawing.Point(717, 1);
             this.clientLable.Name = "clientLable";
             this.clientLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.clientLable.Size = new System.Drawing.Size(125, 56);
