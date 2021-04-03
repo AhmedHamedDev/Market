@@ -106,11 +106,9 @@ namespace Market
             insertTimeColumn = new DataColumn();
             insertTimeColumn.DataType = System.Type.GetType("System.DateTime");
             insertTimeColumn.ColumnName = "InsertTime";
-            insertTimeColumn.Caption = "المجموع";
+            insertTimeColumn.Caption = "التاريخ";
             insertTimeColumn.ReadOnly = true;
             insertTimeColumn.Unique = false;
-
-
 
             myDataTable.Columns.Add(productNameColumn);
             myDataTable.Columns.Add(quantityColumn);

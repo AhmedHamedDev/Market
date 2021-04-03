@@ -60,6 +60,11 @@ namespace Market
             this.OrdersDataGrid.DisplayLayout.Bands[0].Columns[5].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
             this.OrdersDataGrid.DisplayLayout.Bands[0].Columns[6].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
             this.OrdersDataGrid.DisplayLayout.Bands[0].Columns[7].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+            this.OrdersDataGrid.DisplayLayout.Bands[0].Columns[8].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+            this.OrdersDataGrid.DisplayLayout.Bands[0].Columns[9].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+            this.OrdersDataGrid.DisplayLayout.Bands[0].Columns[10].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+            this.OrdersDataGrid.DisplayLayout.Bands[0].Columns[11].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+            this.OrdersDataGrid.DisplayLayout.Bands[0].Columns[12].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
 
             // first column as checkbox
             UltraGridColumn ugc = OrdersDataGrid.DisplayLayout.Bands[0].Columns["Selected"];
@@ -89,13 +94,15 @@ namespace Market
 
             if (!user.IsAdmin)
             {
-                DeliveryLable.Visible = false;
+                DeliveryResturantLable.Visible = false;
                 OrderSellLable.Visible = false;
                 TotalLable.Visible = false;
+                deliveryPilotLable.Visible = false;
 
-                delivery.Visible = false;
+                deliveryResturant.Visible = false;
                 OrderSell.Visible = false;
                 Total.Visible = false;
+                deliveryPilot.Visible = false;
             }
 
             dateTimeFrom.DateTime = DateTime.Today;
@@ -136,13 +143,21 @@ namespace Market
             orderNumberColumn.ReadOnly = true;
             orderNumberColumn.Unique = false;
 
-            DataColumn totalSellColumn = new DataColumn();
-            totalSellColumn = new DataColumn();
-            totalSellColumn.DataType = System.Type.GetType("System.Decimal");
-            totalSellColumn.ColumnName = "TotalSell";
-            totalSellColumn.Caption = "الاجمالى";
-            totalSellColumn.ReadOnly = true;
-            totalSellColumn.Unique = false;
+            DataColumn discoundColumn = new DataColumn();
+            discoundColumn = new DataColumn();
+            discoundColumn.DataType = System.Type.GetType("System.String");
+            discoundColumn.ColumnName = "Discound";
+            discoundColumn.Caption = "الخصم";
+            discoundColumn.ReadOnly = true;
+            discoundColumn.Unique = false;
+
+            DataColumn orderDetailsTotalColumn = new DataColumn();
+            orderDetailsTotalColumn = new DataColumn();
+            orderDetailsTotalColumn.DataType = System.Type.GetType("System.Decimal");
+            orderDetailsTotalColumn.ColumnName = "orderDetailsTotal";
+            orderDetailsTotalColumn.Caption = "اجمالى الاوردر";
+            orderDetailsTotalColumn.ReadOnly = true;
+            orderDetailsTotalColumn.Unique = false;
 
             DataColumn insertTimeColumn = new DataColumn();
             insertTimeColumn = new DataColumn();
@@ -160,6 +175,22 @@ namespace Market
             isDeliveryColumn.ReadOnly = true;
             isDeliveryColumn.Unique = false;
 
+            DataColumn DeliveryCostForOwnerColumn = new DataColumn();
+            DeliveryCostForOwnerColumn = new DataColumn();
+            DeliveryCostForOwnerColumn.DataType = System.Type.GetType("System.Decimal");
+            DeliveryCostForOwnerColumn.ColumnName = "DeliveryCostForOwner";
+            DeliveryCostForOwnerColumn.Caption = "التوصيل للمطعم";
+            DeliveryCostForOwnerColumn.ReadOnly = true;
+            DeliveryCostForOwnerColumn.Unique = false;
+
+            DataColumn DeliveryCostForPilotColumn = new DataColumn();
+            DeliveryCostForPilotColumn = new DataColumn();
+            DeliveryCostForPilotColumn.DataType = System.Type.GetType("System.Decimal");
+            DeliveryCostForPilotColumn.ColumnName = "DeliveryCostForPilot";
+            DeliveryCostForPilotColumn.Caption = "التوصيل للطيار";
+            DeliveryCostForPilotColumn.ReadOnly = true;
+            DeliveryCostForPilotColumn.Unique = false;
+
             DataColumn clientNameColumn = new DataColumn();
             clientNameColumn = new DataColumn();
             clientNameColumn.DataType = System.Type.GetType("System.String");
@@ -176,14 +207,36 @@ namespace Market
             villageColumn.ReadOnly = true;
             villageColumn.Unique = false;
 
+            DataColumn totalSellColumn = new DataColumn();
+            totalSellColumn = new DataColumn();
+            totalSellColumn.DataType = System.Type.GetType("System.Decimal");
+            totalSellColumn.ColumnName = "TotalSell";
+            totalSellColumn.Caption = "الاجمالى";
+            totalSellColumn.ReadOnly = true;
+            totalSellColumn.Unique = false;
+
+            DataColumn delayedColumn = new DataColumn();
+            delayedColumn = new DataColumn();
+            delayedColumn.DataType = System.Type.GetType("System.Boolean");
+            delayedColumn.ColumnName = "Delayed";
+            delayedColumn.Caption = "مؤجل";
+            delayedColumn.ReadOnly = true;
+            delayedColumn.Unique = false;
+
             myDataTable.Columns.Add(selectedColumn);
             myDataTable.Columns.Add(orderIdColumn);
             myDataTable.Columns.Add(orderNumberColumn);
-            myDataTable.Columns.Add(totalSellColumn);
+            myDataTable.Columns.Add(discoundColumn);
             myDataTable.Columns.Add(insertTimeColumn);
+            myDataTable.Columns.Add(orderDetailsTotalColumn);
             myDataTable.Columns.Add(isDeliveryColumn);
+            myDataTable.Columns.Add(DeliveryCostForOwnerColumn);
+            myDataTable.Columns.Add(DeliveryCostForPilotColumn);
             myDataTable.Columns.Add(clientNameColumn);
             myDataTable.Columns.Add(villageColumn);
+            myDataTable.Columns.Add(delayedColumn);
+            myDataTable.Columns.Add(totalSellColumn);
+
 
             DataSet dataSet = new DataSet();
             dataSet.Tables.Add(myDataTable);
@@ -202,11 +255,17 @@ namespace Market
                 theDataRow[0] = false;
                 theDataRow[1] = order.OrderId;
                 theDataRow[2] = order.OrderNumber;
-                theDataRow[3] = order.TotalSell;
+                theDataRow[3] = ((1 - order.Discound) * 100).ToString() + "%";
                 theDataRow[4] = order.InsertTime.ToString("hh-mm  dd/MM/yyyy");
-                theDataRow[5] = order.IsDelivery;
-                theDataRow[6] = order.Client?.Name;
-                theDataRow[7] = order.Client?.Village?.VillageName;
+                theDataRow[5] = order.TotalSell - order.DeliveryCost;
+                theDataRow[6] = order.IsDelivery;
+                theDataRow[7] = order.DeliveryCost * (decimal)0.9;
+                theDataRow[8] = order.DeliveryCost * (decimal)0.1;
+                theDataRow[9] = order.Client?.Name;
+                theDataRow[10] = order.Client?.Village?.VillageName;
+                theDataRow[11] = order.Delayed;
+                theDataRow[12] = order.TotalSell;
+
                 myDataTable.Rows.Add(theDataRow);
             }
 
@@ -284,7 +343,7 @@ namespace Market
                 filterd = filterd.Where(x => x.ClientId == ClientId).ToList();
 
             if (VillageId != 0)
-                filterd = filterd.Where(x => x.Client.VillageId == VillageId).ToList();
+                filterd = filterd.Where(x => x.Client?.VillageId == VillageId).ToList();
 
             if (ProductTypeId != 0)
                 filterd = filterd.Where(x => x.OrderDetails.Where(y => y.ProductTypeId == ProductTypeId).Count() > 0).ToList();
@@ -316,11 +375,12 @@ namespace Market
                 }
 
                 if (order.IsDelivery)
-                    deliverySum += order.Client.Village.DeliveryCost;
+                    deliverySum += order.DeliveryCost;
             }
 
             OrderSellLable.Text = sum.ToString();
-            DeliveryLable.Text = deliverySum.ToString();
+            DeliveryResturantLable.Text = (deliverySum * (decimal)0.9).ToString();
+            deliveryPilotLable.Text = (deliverySum * (decimal)0.1).ToString();
             TotalLable.Text = (sum + deliverySum).ToString();
             return sum;
         }

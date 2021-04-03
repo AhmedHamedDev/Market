@@ -32,13 +32,18 @@ namespace Market
         /// </summary>
         private void InitializeComponent()
         {
-            Infragistics.Win.ValueListItem valueListItem1 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem2 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem3 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem4 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem15 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem16 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem17 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem18 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem19 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem20 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem21 = new Infragistics.Win.ValueListItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.TotalLable = new System.Windows.Forms.Label();
             this.comboClient = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
+            this.comboDiscound = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.clientLable = new System.Windows.Forms.Label();
             this.btnSaveOrder = new System.Windows.Forms.Button();
@@ -54,15 +59,17 @@ namespace Market
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDeleteOrderDetail = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lableSellPrice = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.LableAvailableQuantity = new System.Windows.Forms.Label();
             this.AvailableQuantity = new System.Windows.Forms.Label();
             this.comboGeneralProductType = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.comboProductType = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.label7 = new System.Windows.Forms.Label();
-            this.lableSellPrice = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.checkBoxDelayed = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboClient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboDiscound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsDataGrid)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,8 +82,11 @@ namespace Market
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.checkBoxDelayed);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.TotalLable);
             this.panel1.Controls.Add(this.comboClient);
+            this.panel1.Controls.Add(this.comboDiscound);
             this.panel1.Controls.Add(this.btnAddClient);
             this.panel1.Controls.Add(this.clientLable);
             this.panel1.Controls.Add(this.btnSaveOrder);
@@ -89,6 +99,19 @@ namespace Market
             this.panel1.Size = new System.Drawing.Size(1244, 234);
             this.panel1.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cairo", 18F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(589, 17);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(93, 45);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "الخصم :";
+            // 
             // TotalLable
             // 
             this.TotalLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -99,7 +122,7 @@ namespace Market
             this.TotalLable.Location = new System.Drawing.Point(987, 174);
             this.TotalLable.Name = "TotalLable";
             this.TotalLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TotalLable.Size = new System.Drawing.Size(64, 45);
+            this.TotalLable.Size = new System.Drawing.Size(47, 36);
             this.TotalLable.TabIndex = 33;
             this.TotalLable.Text = "----";
             // 
@@ -110,9 +133,30 @@ namespace Market
             this.comboClient.Location = new System.Drawing.Point(302, 90);
             this.comboClient.Name = "comboClient";
             this.comboClient.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboClient.Size = new System.Drawing.Size(281, 44);
+            this.comboClient.Size = new System.Drawing.Size(281, 37);
             this.comboClient.TabIndex = 27;
             this.comboClient.TextChanged += new System.EventHandler(this.comboClient_TextChanged);
+            // 
+            // comboDiscound
+            // 
+            this.comboDiscound.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.SuggestAppend;
+            this.comboDiscound.Font = new System.Drawing.Font("Cairo", 10.8F);
+            valueListItem15.DataValue = 0;
+            valueListItem15.DisplayText = "0 %";
+            valueListItem16.DataValue = 1;
+            valueListItem16.DisplayText = "10 %";
+            valueListItem17.DataValue = 2;
+            valueListItem17.DisplayText = "20 %";
+            this.comboDiscound.Items.AddRange(new Infragistics.Win.ValueListItem[] {
+            valueListItem15,
+            valueListItem16,
+            valueListItem17});
+            this.comboDiscound.Location = new System.Drawing.Point(302, 25);
+            this.comboDiscound.Name = "comboDiscound";
+            this.comboDiscound.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboDiscound.Size = new System.Drawing.Size(281, 37);
+            this.comboDiscound.TabIndex = 27;
+            this.comboDiscound.ValueChanged += new System.EventHandler(this.comboDiscound_ValueChanged);
             // 
             // btnAddClient
             // 
@@ -138,7 +182,7 @@ namespace Market
             this.clientLable.Location = new System.Drawing.Point(589, 78);
             this.clientLable.Name = "clientLable";
             this.clientLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.clientLable.Size = new System.Drawing.Size(125, 56);
+            this.clientLable.Size = new System.Drawing.Size(100, 45);
             this.clientLable.TabIndex = 24;
             this.clientLable.Text = "العميل :";
             // 
@@ -163,10 +207,10 @@ namespace Market
             this.checkBoxIsDelivery.AutoSize = true;
             this.checkBoxIsDelivery.Font = new System.Drawing.Font("Cairo", 12F);
             this.checkBoxIsDelivery.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBoxIsDelivery.Location = new System.Drawing.Point(943, 90);
+            this.checkBoxIsDelivery.Location = new System.Drawing.Point(964, 90);
             this.checkBoxIsDelivery.Name = "checkBoxIsDelivery";
             this.checkBoxIsDelivery.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxIsDelivery.Size = new System.Drawing.Size(107, 41);
+            this.checkBoxIsDelivery.Size = new System.Drawing.Size(86, 34);
             this.checkBoxIsDelivery.TabIndex = 22;
             this.checkBoxIsDelivery.Text = "ديليفري";
             this.checkBoxIsDelivery.UseVisualStyleBackColor = true;
@@ -182,7 +226,7 @@ namespace Market
             this.Total.Location = new System.Drawing.Point(1056, 165);
             this.Total.Name = "Total";
             this.Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Total.Size = new System.Drawing.Size(145, 56);
+            this.Total.Size = new System.Drawing.Size(115, 45);
             this.Total.TabIndex = 5;
             this.Total.Text = "الاجمالى :";
             // 
@@ -192,7 +236,7 @@ namespace Market
             this.txtboxOrderNumber.Font = new System.Drawing.Font("Cairo", 12F);
             this.txtboxOrderNumber.Location = new System.Drawing.Point(759, 24);
             this.txtboxOrderNumber.Name = "txtboxOrderNumber";
-            this.txtboxOrderNumber.Size = new System.Drawing.Size(291, 45);
+            this.txtboxOrderNumber.Size = new System.Drawing.Size(291, 37);
             this.txtboxOrderNumber.TabIndex = 4;
             this.txtboxOrderNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -206,7 +250,7 @@ namespace Market
             this.label1.Location = new System.Drawing.Point(1056, 15);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(171, 56);
+            this.label1.Size = new System.Drawing.Size(133, 45);
             this.label1.TabIndex = 3;
             this.label1.Text = "رقم الاوردر :";
             // 
@@ -235,7 +279,7 @@ namespace Market
             this.label3.Location = new System.Drawing.Point(1058, 99);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(121, 56);
+            this.label3.Size = new System.Drawing.Size(96, 45);
             this.label3.TabIndex = 19;
             this.label3.Text = "الصنف :";
             // 
@@ -244,7 +288,7 @@ namespace Market
             this.txtboxQuantity.Font = new System.Drawing.Font("Cairo", 12F);
             this.txtboxQuantity.Location = new System.Drawing.Point(302, 111);
             this.txtboxQuantity.Name = "txtboxQuantity";
-            this.txtboxQuantity.Size = new System.Drawing.Size(281, 45);
+            this.txtboxQuantity.Size = new System.Drawing.Size(281, 37);
             this.txtboxQuantity.TabIndex = 16;
             this.txtboxQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -257,7 +301,7 @@ namespace Market
             this.label4.Location = new System.Drawing.Point(589, 100);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(125, 56);
+            this.label4.Size = new System.Drawing.Size(100, 45);
             this.label4.TabIndex = 15;
             this.label4.Text = "الكميه :";
             // 
@@ -339,6 +383,32 @@ namespace Market
             this.panel3.Size = new System.Drawing.Size(1244, 187);
             this.panel3.TabIndex = 4;
             // 
+            // lableSellPrice
+            // 
+            this.lableSellPrice.AutoSize = true;
+            this.lableSellPrice.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lableSellPrice.ForeColor = System.Drawing.Color.Gold;
+            this.lableSellPrice.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lableSellPrice.Location = new System.Drawing.Point(358, 30);
+            this.lableSellPrice.Name = "lableSellPrice";
+            this.lableSellPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lableSellPrice.Size = new System.Drawing.Size(47, 36);
+            this.lableSellPrice.TabIndex = 34;
+            this.lableSellPrice.Text = "----";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gold;
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(420, 30);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(99, 36);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "سعر البيع :";
+            // 
             // LableAvailableQuantity
             // 
             this.LableAvailableQuantity.AutoSize = true;
@@ -348,7 +418,7 @@ namespace Market
             this.LableAvailableQuantity.Location = new System.Drawing.Point(358, 65);
             this.LableAvailableQuantity.Name = "LableAvailableQuantity";
             this.LableAvailableQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LableAvailableQuantity.Size = new System.Drawing.Size(64, 45);
+            this.LableAvailableQuantity.Size = new System.Drawing.Size(47, 36);
             this.LableAvailableQuantity.TabIndex = 32;
             this.LableAvailableQuantity.Text = "----";
             // 
@@ -361,7 +431,7 @@ namespace Market
             this.AvailableQuantity.Location = new System.Drawing.Point(420, 65);
             this.AvailableQuantity.Name = "AvailableQuantity";
             this.AvailableQuantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.AvailableQuantity.Size = new System.Drawing.Size(178, 45);
+            this.AvailableQuantity.Size = new System.Drawing.Size(141, 36);
             this.AvailableQuantity.TabIndex = 31;
             this.AvailableQuantity.Text = "الكميه المتاحه :";
             // 
@@ -370,23 +440,23 @@ namespace Market
             this.comboGeneralProductType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboGeneralProductType.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.SuggestAppend;
             this.comboGeneralProductType.Font = new System.Drawing.Font("Cairo", 10.8F);
-            valueListItem1.DataValue = 0;
-            valueListItem1.DisplayText = "الكل";
-            valueListItem2.DataValue = 1;
-            valueListItem2.DisplayText = "مأكولات";
-            valueListItem3.DataValue = 2;
-            valueListItem3.DisplayText = "مشروبات";
-            valueListItem4.DataValue = 3;
-            valueListItem4.DisplayText = "شيشه";
+            valueListItem18.DataValue = 0;
+            valueListItem18.DisplayText = "الكل";
+            valueListItem19.DataValue = 1;
+            valueListItem19.DisplayText = "مأكولات";
+            valueListItem20.DataValue = 2;
+            valueListItem20.DisplayText = "مشروبات";
+            valueListItem21.DataValue = 3;
+            valueListItem21.DisplayText = "شيشه";
             this.comboGeneralProductType.Items.AddRange(new Infragistics.Win.ValueListItem[] {
-            valueListItem1,
-            valueListItem2,
-            valueListItem3,
-            valueListItem4});
+            valueListItem18,
+            valueListItem19,
+            valueListItem20,
+            valueListItem21});
             this.comboGeneralProductType.Location = new System.Drawing.Point(759, 32);
             this.comboGeneralProductType.Name = "comboGeneralProductType";
             this.comboGeneralProductType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboGeneralProductType.Size = new System.Drawing.Size(291, 44);
+            this.comboGeneralProductType.Size = new System.Drawing.Size(291, 37);
             this.comboGeneralProductType.TabIndex = 30;
             this.comboGeneralProductType.ValueChanged += new System.EventHandler(this.comboGeneralProductType_ValueChanged);
             // 
@@ -398,7 +468,7 @@ namespace Market
             this.comboProductType.Location = new System.Drawing.Point(759, 110);
             this.comboProductType.Name = "comboProductType";
             this.comboProductType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboProductType.Size = new System.Drawing.Size(291, 44);
+            this.comboProductType.Size = new System.Drawing.Size(291, 37);
             this.comboProductType.TabIndex = 29;
             this.comboProductType.ValueChanged += new System.EventHandler(this.comboProductType_ValueChanged);
             // 
@@ -412,42 +482,30 @@ namespace Market
             this.label7.Location = new System.Drawing.Point(1056, 21);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(98, 56);
+            this.label7.Size = new System.Drawing.Size(78, 45);
             this.label7.TabIndex = 29;
             this.label7.Text = "النوع :";
             // 
-            // lableSellPrice
+            // checkBoxDelayed
             // 
-            this.lableSellPrice.AutoSize = true;
-            this.lableSellPrice.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lableSellPrice.ForeColor = System.Drawing.Color.Gold;
-            this.lableSellPrice.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lableSellPrice.Location = new System.Drawing.Point(358, 30);
-            this.lableSellPrice.Name = "lableSellPrice";
-            this.lableSellPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lableSellPrice.Size = new System.Drawing.Size(64, 45);
-            this.lableSellPrice.TabIndex = 34;
-            this.lableSellPrice.Text = "----";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gold;
-            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(420, 30);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(125, 45);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "سعر البيع :";
+            this.checkBoxDelayed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxDelayed.AutoSize = true;
+            this.checkBoxDelayed.Font = new System.Drawing.Font("Cairo", 12F);
+            this.checkBoxDelayed.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkBoxDelayed.Location = new System.Drawing.Point(759, 90);
+            this.checkBoxDelayed.Name = "checkBoxDelayed";
+            this.checkBoxDelayed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBoxDelayed.Size = new System.Drawing.Size(71, 34);
+            this.checkBoxDelayed.TabIndex = 35;
+            this.checkBoxDelayed.Text = "مؤجل";
+            this.checkBoxDelayed.UseVisualStyleBackColor = true;
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1288, 804);
+            this.ClientSize = new System.Drawing.Size(1288, 788);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.OrderDetailsDataGrid);
@@ -467,6 +525,7 @@ namespace Market
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboClient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboDiscound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsDataGrid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -496,6 +555,7 @@ namespace Market
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnAddClient;
         private UltraComboEditor comboClient;
+        private UltraComboEditor comboDiscound;
         private UltraComboEditor comboProductType;
         private UltraComboEditor comboGeneralProductType;
         private System.Windows.Forms.Label label7;
@@ -504,5 +564,7 @@ namespace Market
         private System.Windows.Forms.Label TotalLable;
         private System.Windows.Forms.Label lableSellPrice;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBoxDelayed;
     }
 }

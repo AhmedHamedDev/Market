@@ -12,6 +12,9 @@ namespace Market.Models
         public string OrderNumber { get; set; }
         public decimal TotalSell { get; set; }
         public bool IsDelivery { get; set; }
+        public decimal DeliveryCost { get; set; }
+        public decimal Discound { get; set; }
+        public bool Delayed { get; set; }
         public DateTime InsertTime { get; set; }
 
         public int? ClientId { get; set; }

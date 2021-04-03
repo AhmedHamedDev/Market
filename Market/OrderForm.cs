@@ -57,17 +57,13 @@ namespace Market
             // stop confirmation message on delete
             OrderDetailsDataGrid.DisplayLayout.ShowDeleteRowsPrompt = false;
 
-            clientLable.Visible = false;
-            comboClient.Visible = false;
-            btnAddClient.Visible = false;
-
             using (var db = new MarketDbContext())
             {
                 Clients = db.Clients.Include("Village").ToList();
                 ProductTypes = db.ProductTypes.ToList();
             }
 
-            this.comboClient.DataSource = Clients.Select(x=>new { Name = x.Name + " - " + x.Number, ClientId = x.ClientId}).ToList();
+            this.comboClient.DataSource = Clients.Select(x => new { Name = x.Name + " - " + x.Number, ClientId = x.ClientId }).ToList();
             this.comboClient.DisplayMember = "Name";
             this.comboClient.Name = "Name";
             this.comboClient.ValueMember = "ClientId";
@@ -77,6 +73,7 @@ namespace Market
             this.comboProductType.Name = "TypeName";
             this.comboProductType.ValueMember = "ProductTypeId";
 
+            this.comboDiscound.SelectedIndex = 0;
         }
 
         private void PrepareColumns()
@@ -155,25 +152,12 @@ namespace Market
 
         private void checkBoxIsDelivery_CheckedChanged(object sender, EventArgs e)
         {
-            if (((CheckBox)sender).Checked)
-            {
-                clientLable.Visible = true;
-                comboClient.Visible = true;
-                btnAddClient.Visible = true;
-            }
-            else
-            {
-                clientLable.Visible = false;
-                comboClient.Visible = false;
-                btnAddClient.Visible = false;
-            }
-
             CalcTotal();
         }
 
         private void comboGeneralProductType_ValueChanged(object sender, EventArgs e)
         {
-            if(comboGeneralProductType.SelectedItem != null)
+            if (comboGeneralProductType.SelectedItem != null)
             {
                 int selectedId = (int)comboGeneralProductType.SelectedItem.DataValue;
                 if (selectedId == 0)
@@ -187,14 +171,14 @@ namespace Market
         {
             try
             {
-                if(comboProductType.SelectedItem == null)
+                if (comboProductType.SelectedItem == null)
                 {
                     MessageBox.Show("يجب اختيار صنف اولا", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 int Quantity;
-                ProductType product = ProductTypes.FirstOrDefault(x=>x.ProductTypeId == (int)comboProductType.SelectedItem.DataValue);
+                ProductType product = ProductTypes.FirstOrDefault(x => x.ProductTypeId == (int)comboProductType.SelectedItem.DataValue);
                 var canParseQuantity = int.TryParse(txtboxQuantity.Text.Trim(), out Quantity);
 
                 if (!canParseQuantity || Quantity < 0)
@@ -213,8 +197,8 @@ namespace Market
                 if (old == null)
                 {
                     this.Order.OrderDetails.Add(new OrderDetails() { CostPrice = product.CostPrice, SellPrice = product.SellPrice, Quantity = Quantity, InsertTime = DateTime.Now, ProductType = product, ProductTypeId = product.ProductTypeId });
-                    this.myDataTable.Rows.Add(false, product.TypeName, product.CostPrice, product.SellPrice, Quantity, Quantity * product.SellPrice);
-                    
+                    this.myDataTable.Rows.Add(false, product.TypeName, product.CostPrice, product.SellPrice * getDiscound(), Quantity, Quantity * product.SellPrice * getDiscound());
+
                 }
                 else
                 {
@@ -225,16 +209,15 @@ namespace Market
 
                     foreach (var row in OrderDetailsDataGrid.Rows)
                     {
-                        if(row.Cells[1].Value.ToString() == product.TypeName)
+                        if (row.Cells[1].Value.ToString() == product.TypeName)
                         {
                             row.Cells[4].Value = old.Quantity;
-                            row.Cells[5].Value = old.Quantity * old.SellPrice;
+                            row.Cells[5].Value = old.Quantity * old.SellPrice * getDiscound();
                         }
                     }
 
                     this.myDataTable.Columns[4].ReadOnly = true;
                     this.myDataTable.Columns[5].ReadOnly = true;
-
                 }
 
                 product.Quantity -= Quantity;
@@ -304,8 +287,28 @@ namespace Market
             if (checkBoxIsDelivery.Checked && comboClient.SelectedItem != null)
                 sum += Clients.FirstOrDefault(x => x.ClientId == int.Parse(comboClient.SelectedItem.DataValue.ToString())).Village.DeliveryCost;
 
-            TotalLable.Text = sum.ToString();
-            return sum;
+            TotalLable.Text = (sum * getDiscound()).ToString();
+            return sum * getDiscound();
+        }
+
+        private void comboDiscound_ValueChanged(object sender, EventArgs e)
+        {
+            CalcTotal();
+            comboProductType_ValueChanged(null, null);
+
+            myDataTable.Columns[3].ReadOnly = false;
+            myDataTable.Columns[5].ReadOnly = false;
+
+            for (int i = 0; i < OrderDetailsDataGrid.Rows.Count; i++)
+            {
+                var SellCostAfterDescound = Order.OrderDetails.ToArray()[i].SellPrice * getDiscound();
+                OrderDetailsDataGrid.Rows[i].Cells[3].Value = SellCostAfterDescound;
+                OrderDetailsDataGrid.Rows[i].Cells[5].Value = SellCostAfterDescound * Order.OrderDetails.ToArray()[i].Quantity;
+
+            }
+
+            myDataTable.Columns[3].ReadOnly = true;
+            myDataTable.Columns[5].ReadOnly = true;
         }
 
         private void comboProductType_ValueChanged(object sender, EventArgs e)
@@ -314,7 +317,7 @@ namespace Market
             {
                 int selectedId = (int)comboProductType.SelectedItem.DataValue;
                 LableAvailableQuantity.Text = ProductTypes.FirstOrDefault(x => x.ProductTypeId == selectedId).Quantity.ToString();
-                lableSellPrice.Text = ProductTypes.FirstOrDefault(x => x.ProductTypeId == selectedId).SellPrice.ToString();
+                lableSellPrice.Text = (ProductTypes.FirstOrDefault(x => x.ProductTypeId == selectedId).SellPrice * getDiscound()).ToString();
             }
         }
 
@@ -340,6 +343,16 @@ namespace Market
                 this.comboClient.DataSource = Clients.Where(x => x.Name.Contains(comboClient.Text.ToLower().Trim()) || x.Number.Contains(comboClient.Text.ToLower().Trim())).Select(x => new { Name = x.Name + " - " + x.Number, ClientId = x.ClientId }).ToList();
             else
                 CalcTotal();
+        }
+
+        private decimal getDiscound()
+        {
+            if (comboDiscound.SelectedIndex == 1)
+                return (decimal).9;
+            else if (comboDiscound.SelectedIndex == 2)
+                return (decimal).8;
+
+            return 1;
         }
 
         private async void btnSaveOrder_Click(object sender, EventArgs e)
@@ -372,6 +385,8 @@ namespace Market
 
                 Order.InsertTime = DateTime.Now;
                 Order.OrderNumber = orderNumber;
+                Order.Discound = getDiscound();
+                Order.Delayed = checkBoxIsDelivery.Checked;
 
                 if (checkBoxIsDelivery.Checked)
                 {
@@ -383,20 +398,31 @@ namespace Market
                         MessageBox.Show("يجب اختيار عميل", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+                    Order.DeliveryCost = Clients.FirstOrDefault(x => x.ClientId == int.Parse(comboClient.SelectedItem.DataValue.ToString())).Village.DeliveryCost * getDiscound();
                 }
-
-                Order.TotalSell = CalcTotal();
+                else
+                {
+                    if (comboClient.SelectedItem != null)
+                        Order.ClientId = int.Parse(comboClient.SelectedItem.DataValue.ToString());
+                }
 
                 foreach (var item in Order.OrderDetails)
-                {
                     item.ProductType = null;
-                }
+
+                Order.TotalSell = CalcTotal();
 
                 btnSaveOrder.Enabled = false;
                 await Task.Run(() =>
                 {
                     using (var db = new MarketDbContext())
                     {
+
+                        foreach (var item in Order.OrderDetails)
+                        {
+                            item.SellPrice = item.SellPrice * getDiscound();
+                            db.ProductTypes.FirstOrDefault(x => x.ProductTypeId == item.ProductTypeId).Quantity -= item.Quantity;
+                        }
+
                         db.Orders.Add(Order);
                         db.SaveChanges();
                     }
