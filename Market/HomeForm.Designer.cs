@@ -36,11 +36,14 @@ namespace Market
             this.btnVillagesFormShow = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClients = new System.Windows.Forms.Button();
+            this.btnDelayedFormShow = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -94,6 +97,23 @@ namespace Market
             this.btnClients.UseVisualStyleBackColor = false;
             this.btnClients.Click += new System.EventHandler(this.btnClientsFormShow_Click);
             // 
+            // btnDelayedFormShow
+            // 
+            this.btnDelayedFormShow.BackColor = System.Drawing.Color.Fuchsia;
+            resources.ApplyResources(this.btnDelayedFormShow, "btnDelayedFormShow");
+            this.btnDelayedFormShow.Name = "btnDelayedFormShow";
+            this.btnDelayedFormShow.UseVisualStyleBackColor = false;
+            this.btnDelayedFormShow.Click += new System.EventHandler(this.btnDelayedFormShow_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Fuchsia;
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Image = global::Market.Properties.Resources.money;
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.btnDelayedFormShow_Click);
+            // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.LimeGreen;
@@ -143,6 +163,8 @@ namespace Market
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.btnDelayedFormShow);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.btnClients);
             this.Controls.Add(this.label1);
@@ -161,6 +183,7 @@ namespace Market
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeForm_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -184,5 +207,7 @@ namespace Market
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnClients;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btnDelayedFormShow;
     }
 }

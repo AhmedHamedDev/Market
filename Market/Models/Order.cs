@@ -14,7 +14,7 @@ namespace Market.Models
         public bool IsDelivery { get; set; }
         public decimal DeliveryCost { get; set; }
         public decimal Discound { get; set; }
-        public bool Delayed { get; set; }
+        public bool IsDelayed { get; set; }
         public DateTime InsertTime { get; set; }
 
         public int? ClientId { get; set; }

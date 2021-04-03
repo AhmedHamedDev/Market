@@ -74,5 +74,13 @@ namespace Market
             ClientsGrid ClientsGrid = new ClientsGrid(user);
             ClientsGrid.ShowDialog();
         }
+
+        private void btnDelayedFormShow_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Delayed delayed = new Delayed(user);
+            delayed.ShowDialog();
+        }
     }
 }

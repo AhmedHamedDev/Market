@@ -18,7 +18,7 @@ using System.Windows.Forms;
 
 namespace Market
 {
-    public partial class OrderGrid : MetroForm
+    public partial class Delayed : MetroForm
     {
         private User user;
         private List<Order> Orders;
@@ -26,10 +26,9 @@ namespace Market
         private UltraGridRow selectedRow;
 
         private List<Client> Clients;
-        private List<ProductType> ProductTypes;
         private List<Village> Villages;
 
-        public OrderGrid(User _user)
+        public Delayed(User _user)
         {
             user = _user;
 
@@ -40,7 +39,6 @@ namespace Market
             {
                 Orders = db.Orders.Include("Client.Village").Include("OrderDetails.ProductType.GeneralProductTypes").ToList();
                 Clients = db.Clients.Include("Village").ToList();
-                ProductTypes = db.ProductTypes.ToList();
                 Villages = db.Villages.ToList();
             }
             FillWithData(Orders);
@@ -82,31 +80,10 @@ namespace Market
             this.comboClient.Name = "Name";
             this.comboClient.ValueMember = "ClientId";
 
-            this.comboProductType.DataSource = ProductTypes;
-            this.comboProductType.DisplayMember = "TypeName";
-            this.comboProductType.Name = "TypeName";
-            this.comboProductType.ValueMember = "ProductTypeId";
-
             this.comboVillage.DataSource = Villages;
             this.comboVillage.DisplayMember = "VillageName";
             this.comboVillage.Name = "VillageName";
             this.comboVillage.ValueMember = "VillageId";
-
-            if (!user.IsAdmin)
-            {
-                DeliveryResturantLable.Visible = false;
-                OrderSellLable.Visible = false;
-                TotalLable.Visible = false;
-                deliveryPilotLable.Visible = false;
-
-                deliveryResturant.Visible = false;
-                OrderSell.Visible = false;
-                Total.Visible = false;
-                deliveryPilot.Visible = false;
-            }
-
-            dateTimeFrom.DateTime = DateTime.Today;
-            dateTimeTo.DateTime = DateTime.Today.AddDays(1);
 
             btnSearch_Click(null, null);
         }
@@ -271,18 +248,6 @@ namespace Market
 
         }
 
-        private void comboGeneralProductType_ValueChanged(object sender, EventArgs e)
-        {
-            if (comboGeneralProductType.SelectedItem != null)
-            {
-                int selectedId = (int)comboGeneralProductType.SelectedItem.DataValue;
-                if (selectedId == 0)
-                    this.comboProductType.DataSource = ProductTypes;
-                else
-                    this.comboProductType.DataSource = ProductTypes.Where(x => x.GeneralProductTypeId == selectedId).ToList();
-            }
-        }
-
         private void VillagesDataGrid_CellChange(object sender, CellEventArgs e)
         {
             if (StringComparer.OrdinalIgnoreCase.Equals(e.Cell.Column.Key, "Selected"))
@@ -318,28 +283,13 @@ namespace Market
             string orderNumber = txtboxOrderNumber.Text.Trim();
             int ClientId = comboClient.SelectedItem == null ? 0 : int.Parse(comboClient.SelectedItem.DataValue.ToString());
             int VillageId = comboVillage.SelectedItem == null ? 0 : int.Parse(comboVillage.SelectedItem.DataValue.ToString());
-            int ProductTypeId = comboProductType.SelectedItem == null ? 0 : int.Parse(comboProductType.SelectedItem.DataValue.ToString());
-            int GeneralProductTypeId = comboGeneralProductType.SelectedItem == null ? 0 : int.Parse(comboGeneralProductType.SelectedItem.DataValue.ToString());
-            DateTime From = dateTimeFrom.DateTime;
-            DateTime To = dateTimeTo.DateTime;
 
-            var filterd = Orders.ToList();
+            var filterd = Orders.Where(x => x.IsDelayed == true).ToList();
 
             if (radioDelivery.Checked)
                 filterd = filterd.Where(x => x.IsDelivery == true).ToList();
             else if (radioWithoutDelivery.Checked)
                 filterd = filterd.Where(x => x.IsDelivery == false).ToList();
-
-            if (radioDelayed.Checked)
-                filterd = filterd.Where(x => x.IsDelayed == true).ToList();
-            else if (radioPaied.Checked)
-                filterd = filterd.Where(x => x.IsDelayed == false).ToList();
-
-            if (From.Year > 1900)
-                filterd = filterd.Where(x => x.InsertTime >= From).ToList();
-
-            if (To.Year > 1900)
-                filterd = filterd.Where(x => x.InsertTime <= To).ToList();
 
             if (!string.IsNullOrWhiteSpace(orderNumber))
                 filterd = filterd.Where(x => x.OrderNumber.Contains(orderNumber)).ToList();
@@ -350,14 +300,7 @@ namespace Market
             if (VillageId != 0)
                 filterd = filterd.Where(x => x.Client?.VillageId == VillageId).ToList();
 
-            if (ProductTypeId != 0)
-                filterd = filterd.Where(x => x.OrderDetails.Where(y => y.ProductTypeId == ProductTypeId).Count() > 0).ToList();
-
-            if (GeneralProductTypeId != 0)
-                filterd = filterd.Where(x => x.OrderDetails.Where(y => y.ProductType.GeneralProductTypeId == GeneralProductTypeId).Count() > 0).ToList();
-
             FillWithData(filterd);
-            CalcTotal(filterd);
             this.btnSearch.Enabled = true;
         }
 
@@ -368,75 +311,30 @@ namespace Market
             OrderDetailsForm.ShowDialog();
         }
 
-        private decimal CalcTotal(List<Order> orders)
-        {
-            decimal sum = 0;
-            decimal deliverySum = 0;
-            foreach (var order in orders)
-            {
-                foreach (var item in order.OrderDetails)
-                {
-                    sum += item.SellPrice * item.Quantity;
-                }
-
-                if (order.IsDelivery)
-                    deliverySum += order.DeliveryCost;
-            }
-
-            OrderSellLable.Text = sum.ToString();
-            DeliveryResturantLable.Text = (deliverySum * (decimal)0.9).ToString();
-            deliveryPilotLable.Text = (deliverySum * (decimal)0.1).ToString();
-            TotalLable.Text = (sum + deliverySum).ToString();
-            return sum;
-        }
-
-        private async void btnExtractData_Click(object sender, EventArgs e)
+        private async void btnPay_Click(object sender, EventArgs e)
         {
             try
             {
-                btnExtractData.Enabled = false;
-                btnExtractData.Text = "انتظر";
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string fullPath = path + "\\Orders " + DateTime.Now.ToString("dd-MM-yyyy") + ".xls";
-                this.ultraGridExcelExporter1.Export(this.OrdersDataGrid, fullPath);
-
-                using(var SmtpServer = new SmtpClient("smtp.gmail.com"))
+                DialogResult result = MessageBox.Show(" هل تريد الدفع ؟ ", "تأكيد", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
                 {
-                    using (var mail = new MailMessage())
+                    var id = int.Parse(selectedRow.Cells[1].Value.ToString());
+                    using (var db = new MarketDbContext())
                     {
-                        mail.From = new MailAddress("ahmedhamed111111111@gmail.com");
-                        mail.To.Add(ConfigurationManager.AppSettings["ToEmail"]);
-                        mail.Subject = "المبيعات";
-
-                        System.Net.Mail.Attachment attachment;
-                        attachment = new System.Net.Mail.Attachment(fullPath);
-                        mail.Attachments.Add(attachment);
-
-                        SmtpServer.Port = 587;
-                        SmtpServer.Credentials = new System.Net.NetworkCredential("ahmedhamed111111111@gmail.com", "aha_168199600");
-                        SmtpServer.EnableSsl = true;
-
-                        SmtpServer.Send(mail);
-
-                        attachment.Dispose();
+                        db.Orders.FirstOrDefault(x => x.OrderId == id).IsDelayed = false;
+                        await Task.Run(() =>
+                        {
+                            db.SaveChanges();
+                        });
                     }
+                    Orders.FirstOrDefault(x => x.OrderId == id).IsDelayed = false;
+                    btnSearch_Click(null, null);
+                    MessageBox.Show("تم الدفع بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-                await Task.Run(() =>
-                {
-                    Thread.Sleep(10000);
-                    File.Delete(fullPath);
-                });
-
-                btnExtractData.Text = "ارسال البيانات";
-                btnExtractData.Enabled = true;
-                MessageBox.Show("تم ارسال البيانات بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception exp)
             {
-                btnExtractData.Text = "ارسال البيانات";
-                btnExtractData.Enabled = true;
                 MessageBox.Show("عذرا حدث خطأ ما", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

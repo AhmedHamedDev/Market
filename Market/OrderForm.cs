@@ -386,7 +386,7 @@ namespace Market
                 Order.InsertTime = DateTime.Now;
                 Order.OrderNumber = orderNumber;
                 Order.Discound = getDiscound();
-                Order.Delayed = checkBoxIsDelivery.Checked;
+                Order.IsDelayed = checkBoxIsDelivery.Checked;
 
                 if (checkBoxIsDelivery.Checked)
                 {
