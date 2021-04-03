@@ -32,14 +32,15 @@ namespace Market
         /// </summary>
         private void InitializeComponent()
         {
-            Infragistics.Win.ValueListItem valueListItem15 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem16 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem17 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem18 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem19 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem20 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem21 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem1 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem2 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem3 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem4 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem5 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem6 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem7 = new Infragistics.Win.ValueListItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxIsDelayed = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TotalLable = new System.Windows.Forms.Label();
             this.comboClient = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
@@ -66,7 +67,6 @@ namespace Market
             this.comboGeneralProductType = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.comboProductType = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBoxDelayed = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboDiscound)).BeginInit();
@@ -82,7 +82,7 @@ namespace Market
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.checkBoxDelayed);
+            this.panel1.Controls.Add(this.checkBoxIsDelayed);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.TotalLable);
             this.panel1.Controls.Add(this.comboClient);
@@ -98,6 +98,20 @@ namespace Market
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1244, 234);
             this.panel1.TabIndex = 0;
+            // 
+            // checkBoxIsDelayed
+            // 
+            this.checkBoxIsDelayed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxIsDelayed.AutoSize = true;
+            this.checkBoxIsDelayed.Font = new System.Drawing.Font("Cairo", 12F);
+            this.checkBoxIsDelayed.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkBoxIsDelayed.Location = new System.Drawing.Point(759, 90);
+            this.checkBoxIsDelayed.Name = "checkBoxIsDelayed";
+            this.checkBoxIsDelayed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBoxIsDelayed.Size = new System.Drawing.Size(71, 34);
+            this.checkBoxIsDelayed.TabIndex = 35;
+            this.checkBoxIsDelayed.Text = "مؤجل";
+            this.checkBoxIsDelayed.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -141,16 +155,16 @@ namespace Market
             // 
             this.comboDiscound.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.SuggestAppend;
             this.comboDiscound.Font = new System.Drawing.Font("Cairo", 10.8F);
-            valueListItem15.DataValue = 0;
-            valueListItem15.DisplayText = "0 %";
-            valueListItem16.DataValue = 1;
-            valueListItem16.DisplayText = "10 %";
-            valueListItem17.DataValue = 2;
-            valueListItem17.DisplayText = "20 %";
+            valueListItem1.DataValue = 0;
+            valueListItem1.DisplayText = "0 %";
+            valueListItem2.DataValue = 1;
+            valueListItem2.DisplayText = "10 %";
+            valueListItem3.DataValue = 2;
+            valueListItem3.DisplayText = "20 %";
             this.comboDiscound.Items.AddRange(new Infragistics.Win.ValueListItem[] {
-            valueListItem15,
-            valueListItem16,
-            valueListItem17});
+            valueListItem1,
+            valueListItem2,
+            valueListItem3});
             this.comboDiscound.Location = new System.Drawing.Point(302, 25);
             this.comboDiscound.Name = "comboDiscound";
             this.comboDiscound.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -440,19 +454,19 @@ namespace Market
             this.comboGeneralProductType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboGeneralProductType.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.SuggestAppend;
             this.comboGeneralProductType.Font = new System.Drawing.Font("Cairo", 10.8F);
-            valueListItem18.DataValue = 0;
-            valueListItem18.DisplayText = "الكل";
-            valueListItem19.DataValue = 1;
-            valueListItem19.DisplayText = "مأكولات";
-            valueListItem20.DataValue = 2;
-            valueListItem20.DisplayText = "مشروبات";
-            valueListItem21.DataValue = 3;
-            valueListItem21.DisplayText = "شيشه";
+            valueListItem4.DataValue = 0;
+            valueListItem4.DisplayText = "الكل";
+            valueListItem5.DataValue = 1;
+            valueListItem5.DisplayText = "مأكولات";
+            valueListItem6.DataValue = 2;
+            valueListItem6.DisplayText = "مشروبات";
+            valueListItem7.DataValue = 3;
+            valueListItem7.DisplayText = "شيشه";
             this.comboGeneralProductType.Items.AddRange(new Infragistics.Win.ValueListItem[] {
-            valueListItem18,
-            valueListItem19,
-            valueListItem20,
-            valueListItem21});
+            valueListItem4,
+            valueListItem5,
+            valueListItem6,
+            valueListItem7});
             this.comboGeneralProductType.Location = new System.Drawing.Point(759, 32);
             this.comboGeneralProductType.Name = "comboGeneralProductType";
             this.comboGeneralProductType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -485,20 +499,6 @@ namespace Market
             this.label7.Size = new System.Drawing.Size(78, 45);
             this.label7.TabIndex = 29;
             this.label7.Text = "النوع :";
-            // 
-            // checkBoxDelayed
-            // 
-            this.checkBoxDelayed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxDelayed.AutoSize = true;
-            this.checkBoxDelayed.Font = new System.Drawing.Font("Cairo", 12F);
-            this.checkBoxDelayed.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBoxDelayed.Location = new System.Drawing.Point(759, 90);
-            this.checkBoxDelayed.Name = "checkBoxDelayed";
-            this.checkBoxDelayed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxDelayed.Size = new System.Drawing.Size(71, 34);
-            this.checkBoxDelayed.TabIndex = 35;
-            this.checkBoxDelayed.Text = "مؤجل";
-            this.checkBoxDelayed.UseVisualStyleBackColor = true;
             // 
             // OrderForm
             // 
@@ -565,6 +565,6 @@ namespace Market
         private System.Windows.Forms.Label lableSellPrice;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBoxDelayed;
+        private System.Windows.Forms.CheckBox checkBoxIsDelayed;
     }
 }
