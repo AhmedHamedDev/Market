@@ -28,6 +28,7 @@ namespace Market
         public DbSet<Order> Orders { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Models.OrderDetails> OrderDetails { get; set; }
+        public DbSet<Models.DailyCost> DailyCosts { get; set; }
     }
 
 }

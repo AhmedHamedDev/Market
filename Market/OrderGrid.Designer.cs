@@ -39,21 +39,18 @@ namespace Market
             Infragistics.Win.ValueListItem valueListItem4 = new Infragistics.Win.ValueListItem();
             this.OrdersDataGrid = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.deliveryPilotLable = new System.Windows.Forms.Label();
-            this.deliveryPilot = new System.Windows.Forms.Label();
-            this.btnExtractData = new System.Windows.Forms.Button();
-            this.radioAllDeliveryNotDelivery = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioDelayed = new System.Windows.Forms.RadioButton();
+            this.radioPaied = new System.Windows.Forms.RadioButton();
+            this.radioAllDelayedPaied = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioWithoutDelivery = new System.Windows.Forms.RadioButton();
             this.radioDelivery = new System.Windows.Forms.RadioButton();
-            this.TotalLable = new System.Windows.Forms.Label();
-            this.Total = new System.Windows.Forms.Label();
-            this.DeliveryResturantLable = new System.Windows.Forms.Label();
-            this.deliveryResturant = new System.Windows.Forms.Label();
+            this.radioAllDeliveryNotDelivery = new System.Windows.Forms.RadioButton();
+            this.btnExtractData = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.dateTimeTo = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.dateTimeFrom = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
-            this.OrderSellLable = new System.Windows.Forms.Label();
-            this.OrderSell = new System.Windows.Forms.Label();
             this.comboVillage = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -68,21 +65,17 @@ namespace Market
             this.txtboxOrderNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
-            this.radioAllDelayedPaied = new System.Windows.Forms.RadioButton();
-            this.radioPaied = new System.Windows.Forms.RadioButton();
-            this.radioDelayed = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTotal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboVillage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboGeneralProductType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboProductType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboClient)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // OrdersDataGrid
@@ -120,20 +113,13 @@ namespace Market
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnTotal);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.deliveryPilotLable);
-            this.panel1.Controls.Add(this.deliveryPilot);
             this.panel1.Controls.Add(this.btnExtractData);
-            this.panel1.Controls.Add(this.TotalLable);
-            this.panel1.Controls.Add(this.Total);
-            this.panel1.Controls.Add(this.DeliveryResturantLable);
-            this.panel1.Controls.Add(this.deliveryResturant);
             this.panel1.Controls.Add(this.btnDetails);
             this.panel1.Controls.Add(this.dateTimeTo);
             this.panel1.Controls.Add(this.dateTimeFrom);
-            this.panel1.Controls.Add(this.OrderSellLable);
-            this.panel1.Controls.Add(this.OrderSell);
             this.panel1.Controls.Add(this.comboVillage);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -152,63 +138,74 @@ namespace Market
             this.panel1.Size = new System.Drawing.Size(1344, 291);
             this.panel1.TabIndex = 0;
             // 
-            // deliveryPilotLable
+            // groupBox2
             // 
-            this.deliveryPilotLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.deliveryPilotLable.AutoSize = true;
-            this.deliveryPilotLable.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryPilotLable.ForeColor = System.Drawing.Color.Gold;
-            this.deliveryPilotLable.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.deliveryPilotLable.Location = new System.Drawing.Point(508, 233);
-            this.deliveryPilotLable.Name = "deliveryPilotLable";
-            this.deliveryPilotLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.deliveryPilotLable.Size = new System.Drawing.Size(59, 43);
-            this.deliveryPilotLable.TabIndex = 59;
-            this.deliveryPilotLable.Text = "----";
+            this.groupBox2.Controls.Add(this.radioDelayed);
+            this.groupBox2.Controls.Add(this.radioPaied);
+            this.groupBox2.Controls.Add(this.radioAllDelayedPaied);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Location = new System.Drawing.Point(12, 107);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(361, 54);
+            this.groupBox2.TabIndex = 64;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
             // 
-            // deliveryPilot
+            // radioDelayed
             // 
-            this.deliveryPilot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.deliveryPilot.AutoSize = true;
-            this.deliveryPilot.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryPilot.ForeColor = System.Drawing.Color.Gold;
-            this.deliveryPilot.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.deliveryPilot.Location = new System.Drawing.Point(573, 233);
-            this.deliveryPilot.Name = "deliveryPilot";
-            this.deliveryPilot.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.deliveryPilot.Size = new System.Drawing.Size(165, 43);
-            this.deliveryPilot.TabIndex = 58;
-            this.deliveryPilot.Text = "ديليفري الطيار :";
+            this.radioDelayed.AutoSize = true;
+            this.radioDelayed.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioDelayed.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.radioDelayed.Location = new System.Drawing.Point(273, 14);
+            this.radioDelayed.Name = "radioDelayed";
+            this.radioDelayed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radioDelayed.Size = new System.Drawing.Size(77, 36);
+            this.radioDelayed.TabIndex = 60;
+            this.radioDelayed.TabStop = true;
+            this.radioDelayed.Text = "مؤجل";
+            this.radioDelayed.UseVisualStyleBackColor = true;
             // 
-            // btnExtractData
+            // radioPaied
             // 
-            this.btnExtractData.BackColor = System.Drawing.Color.Crimson;
-            this.btnExtractData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExtractData.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.btnExtractData.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnExtractData.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExtractData.Location = new System.Drawing.Point(12, 173);
-            this.btnExtractData.Name = "btnExtractData";
-            this.btnExtractData.Size = new System.Drawing.Size(229, 45);
-            this.btnExtractData.TabIndex = 57;
-            this.btnExtractData.Text = "ارسال البيانات";
-            this.btnExtractData.UseVisualStyleBackColor = false;
-            this.btnExtractData.Click += new System.EventHandler(this.btnExtractData_Click);
+            this.radioPaied.AutoSize = true;
+            this.radioPaied.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioPaied.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.radioPaied.Location = new System.Drawing.Point(149, 14);
+            this.radioPaied.Name = "radioPaied";
+            this.radioPaied.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radioPaied.Size = new System.Drawing.Size(85, 36);
+            this.radioPaied.TabIndex = 61;
+            this.radioPaied.TabStop = true;
+            this.radioPaied.Text = "مدفوع";
+            this.radioPaied.UseVisualStyleBackColor = true;
             // 
-            // radioAllDeliveryNotDelivery
+            // radioAllDelayedPaied
             // 
-            this.radioAllDeliveryNotDelivery.AutoSize = true;
-            this.radioAllDeliveryNotDelivery.Checked = true;
-            this.radioAllDeliveryNotDelivery.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioAllDeliveryNotDelivery.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioAllDeliveryNotDelivery.Location = new System.Drawing.Point(8, 17);
-            this.radioAllDeliveryNotDelivery.Name = "radioAllDeliveryNotDelivery";
-            this.radioAllDeliveryNotDelivery.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioAllDeliveryNotDelivery.Size = new System.Drawing.Size(67, 36);
-            this.radioAllDeliveryNotDelivery.TabIndex = 56;
-            this.radioAllDeliveryNotDelivery.TabStop = true;
-            this.radioAllDeliveryNotDelivery.Text = "الكل";
-            this.radioAllDeliveryNotDelivery.UseVisualStyleBackColor = true;
+            this.radioAllDelayedPaied.AutoSize = true;
+            this.radioAllDelayedPaied.Checked = true;
+            this.radioAllDelayedPaied.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioAllDelayedPaied.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.radioAllDelayedPaied.Location = new System.Drawing.Point(8, 14);
+            this.radioAllDelayedPaied.Name = "radioAllDelayedPaied";
+            this.radioAllDelayedPaied.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radioAllDelayedPaied.Size = new System.Drawing.Size(67, 36);
+            this.radioAllDelayedPaied.TabIndex = 62;
+            this.radioAllDelayedPaied.TabStop = true;
+            this.radioAllDelayedPaied.Text = "الكل";
+            this.radioAllDelayedPaied.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioWithoutDelivery);
+            this.groupBox1.Controls.Add(this.radioDelivery);
+            this.groupBox1.Controls.Add(this.radioAllDeliveryNotDelivery);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(361, 54);
+            this.groupBox1.TabIndex = 63;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // radioWithoutDelivery
             // 
@@ -238,61 +235,35 @@ namespace Market
             this.radioDelivery.Text = "دليفري";
             this.radioDelivery.UseVisualStyleBackColor = true;
             // 
-            // TotalLable
+            // radioAllDeliveryNotDelivery
             // 
-            this.TotalLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TotalLable.AutoSize = true;
-            this.TotalLable.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalLable.ForeColor = System.Drawing.Color.Gold;
-            this.TotalLable.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TotalLable.Location = new System.Drawing.Point(270, 233);
-            this.TotalLable.Name = "TotalLable";
-            this.TotalLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TotalLable.Size = new System.Drawing.Size(59, 43);
-            this.TotalLable.TabIndex = 53;
-            this.TotalLable.Text = "----";
+            this.radioAllDeliveryNotDelivery.AutoSize = true;
+            this.radioAllDeliveryNotDelivery.Checked = true;
+            this.radioAllDeliveryNotDelivery.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioAllDeliveryNotDelivery.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.radioAllDeliveryNotDelivery.Location = new System.Drawing.Point(8, 17);
+            this.radioAllDeliveryNotDelivery.Name = "radioAllDeliveryNotDelivery";
+            this.radioAllDeliveryNotDelivery.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radioAllDeliveryNotDelivery.Size = new System.Drawing.Size(67, 36);
+            this.radioAllDeliveryNotDelivery.TabIndex = 56;
+            this.radioAllDeliveryNotDelivery.TabStop = true;
+            this.radioAllDeliveryNotDelivery.Text = "الكل";
+            this.radioAllDeliveryNotDelivery.UseVisualStyleBackColor = true;
             // 
-            // Total
+            // btnExtractData
             // 
-            this.Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Total.AutoSize = true;
-            this.Total.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.ForeColor = System.Drawing.Color.Gold;
-            this.Total.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Total.Location = new System.Drawing.Point(346, 233);
-            this.Total.Name = "Total";
-            this.Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Total.Size = new System.Drawing.Size(111, 43);
-            this.Total.TabIndex = 52;
-            this.Total.Text = "الاجمالى :";
-            // 
-            // DeliveryResturantLable
-            // 
-            this.DeliveryResturantLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeliveryResturantLable.AutoSize = true;
-            this.DeliveryResturantLable.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliveryResturantLable.ForeColor = System.Drawing.Color.Gold;
-            this.DeliveryResturantLable.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DeliveryResturantLable.Location = new System.Drawing.Point(781, 233);
-            this.DeliveryResturantLable.Name = "DeliveryResturantLable";
-            this.DeliveryResturantLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DeliveryResturantLable.Size = new System.Drawing.Size(59, 43);
-            this.DeliveryResturantLable.TabIndex = 51;
-            this.DeliveryResturantLable.Text = "----";
-            // 
-            // deliveryResturant
-            // 
-            this.deliveryResturant.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.deliveryResturant.AutoSize = true;
-            this.deliveryResturant.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryResturant.ForeColor = System.Drawing.Color.Gold;
-            this.deliveryResturant.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.deliveryResturant.Location = new System.Drawing.Point(839, 233);
-            this.deliveryResturant.Name = "deliveryResturant";
-            this.deliveryResturant.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.deliveryResturant.Size = new System.Drawing.Size(187, 43);
-            this.deliveryResturant.TabIndex = 50;
-            this.deliveryResturant.Text = "ديليفري المطعم :";
+            this.btnExtractData.BackColor = System.Drawing.Color.Crimson;
+            this.btnExtractData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExtractData.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnExtractData.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnExtractData.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnExtractData.Location = new System.Drawing.Point(12, 173);
+            this.btnExtractData.Name = "btnExtractData";
+            this.btnExtractData.Size = new System.Drawing.Size(361, 45);
+            this.btnExtractData.TabIndex = 57;
+            this.btnExtractData.Text = "ارسال البيانات";
+            this.btnExtractData.UseVisualStyleBackColor = false;
+            this.btnExtractData.Click += new System.EventHandler(this.btnExtractData_Click);
             // 
             // btnDetails
             // 
@@ -301,7 +272,7 @@ namespace Market
             this.btnDetails.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnDetails.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDetails.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDetails.Location = new System.Drawing.Point(124, 224);
+            this.btnDetails.Location = new System.Drawing.Point(123, 224);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(117, 45);
             this.btnDetails.TabIndex = 49;
@@ -335,34 +306,6 @@ namespace Market
             this.dateTimeFrom.SpinButtonAlignment = Infragistics.Win.ButtonAlignment.Left;
             this.dateTimeFrom.TabIndex = 47;
             // 
-            // OrderSellLable
-            // 
-            this.OrderSellLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderSellLable.AutoSize = true;
-            this.OrderSellLable.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderSellLable.ForeColor = System.Drawing.Color.Gold;
-            this.OrderSellLable.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.OrderSellLable.Location = new System.Drawing.Point(1079, 233);
-            this.OrderSellLable.Name = "OrderSellLable";
-            this.OrderSellLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.OrderSellLable.Size = new System.Drawing.Size(59, 43);
-            this.OrderSellLable.TabIndex = 45;
-            this.OrderSellLable.Text = "----";
-            // 
-            // OrderSell
-            // 
-            this.OrderSell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderSell.AutoSize = true;
-            this.OrderSell.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderSell.ForeColor = System.Drawing.Color.Gold;
-            this.OrderSell.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.OrderSell.Location = new System.Drawing.Point(1154, 233);
-            this.OrderSell.Name = "OrderSell";
-            this.OrderSell.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.OrderSell.Size = new System.Drawing.Size(185, 43);
-            this.OrderSell.TabIndex = 44;
-            this.OrderSell.Text = "اجمالى الاوردرات :";
-            // 
             // comboVillage
             // 
             this.comboVillage.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
@@ -379,7 +322,7 @@ namespace Market
             this.label5.Font = new System.Drawing.Font("Cairo", 18F);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(270, 5);
+            this.label5.Location = new System.Drawing.Point(277, 4);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(113, 56);
@@ -543,74 +486,20 @@ namespace Market
             this.label1.TabIndex = 3;
             this.label1.Text = "رقم الاوردر :";
             // 
-            // radioAllDelayedPaied
+            // btnTotal
             // 
-            this.radioAllDelayedPaied.AutoSize = true;
-            this.radioAllDelayedPaied.Checked = true;
-            this.radioAllDelayedPaied.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioAllDelayedPaied.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioAllDelayedPaied.Location = new System.Drawing.Point(8, 14);
-            this.radioAllDelayedPaied.Name = "radioAllDelayedPaied";
-            this.radioAllDelayedPaied.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioAllDelayedPaied.Size = new System.Drawing.Size(67, 36);
-            this.radioAllDelayedPaied.TabIndex = 62;
-            this.radioAllDelayedPaied.TabStop = true;
-            this.radioAllDelayedPaied.Text = "الكل";
-            this.radioAllDelayedPaied.UseVisualStyleBackColor = true;
-            // 
-            // radioPaied
-            // 
-            this.radioPaied.AutoSize = true;
-            this.radioPaied.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioPaied.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioPaied.Location = new System.Drawing.Point(149, 14);
-            this.radioPaied.Name = "radioPaied";
-            this.radioPaied.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioPaied.Size = new System.Drawing.Size(85, 36);
-            this.radioPaied.TabIndex = 61;
-            this.radioPaied.TabStop = true;
-            this.radioPaied.Text = "مدفوع";
-            this.radioPaied.UseVisualStyleBackColor = true;
-            // 
-            // radioDelayed
-            // 
-            this.radioDelayed.AutoSize = true;
-            this.radioDelayed.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioDelayed.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioDelayed.Location = new System.Drawing.Point(273, 14);
-            this.radioDelayed.Name = "radioDelayed";
-            this.radioDelayed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioDelayed.Size = new System.Drawing.Size(77, 36);
-            this.radioDelayed.TabIndex = 60;
-            this.radioDelayed.TabStop = true;
-            this.radioDelayed.Text = "مؤجل";
-            this.radioDelayed.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioWithoutDelivery);
-            this.groupBox1.Controls.Add(this.radioDelivery);
-            this.groupBox1.Controls.Add(this.radioAllDeliveryNotDelivery);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(12, 57);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(361, 54);
-            this.groupBox1.TabIndex = 63;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.radioDelayed);
-            this.groupBox2.Controls.Add(this.radioPaied);
-            this.groupBox2.Controls.Add(this.radioAllDelayedPaied);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(12, 107);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(361, 54);
-            this.groupBox2.TabIndex = 64;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.btnTotal.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTotal.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTotal.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnTotal.Location = new System.Drawing.Point(256, 224);
+            this.btnTotal.Name = "btnTotal";
+            this.btnTotal.Size = new System.Drawing.Size(117, 45);
+            this.btnTotal.TabIndex = 65;
+            this.btnTotal.Text = "الاجمالى";
+            this.btnTotal.UseVisualStyleBackColor = false;
+            this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
             // 
             // OrderGrid
             // 
@@ -635,16 +524,16 @@ namespace Market
             ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeTo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeFrom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboVillage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboGeneralProductType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboProductType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboClient)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -655,8 +544,6 @@ namespace Market
         private System.Windows.Forms.Button btnDetails;
         private UltraDateTimeEditor dateTimeTo;
         private UltraDateTimeEditor dateTimeFrom;
-        private System.Windows.Forms.Label OrderSellLable;
-        private System.Windows.Forms.Label OrderSell;
         private UltraComboEditor comboVillage;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -670,21 +557,16 @@ namespace Market
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtboxOrderNumber;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label TotalLable;
-        private System.Windows.Forms.Label Total;
-        private System.Windows.Forms.Label DeliveryResturantLable;
-        private System.Windows.Forms.Label deliveryResturant;
         private System.Windows.Forms.RadioButton radioAllDeliveryNotDelivery;
         private System.Windows.Forms.RadioButton radioWithoutDelivery;
         private System.Windows.Forms.RadioButton radioDelivery;
         private System.Windows.Forms.Button btnExtractData;
         private Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter ultraGridExcelExporter1;
-        private System.Windows.Forms.Label deliveryPilotLable;
-        private System.Windows.Forms.Label deliveryPilot;
         private System.Windows.Forms.RadioButton radioAllDelayedPaied;
         private System.Windows.Forms.RadioButton radioPaied;
         private System.Windows.Forms.RadioButton radioDelayed;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnTotal;
     }
 }

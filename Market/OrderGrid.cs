@@ -29,6 +29,11 @@ namespace Market
         private List<ProductType> ProductTypes;
         private List<Village> Villages;
 
+        private decimal OrderSell = 0;
+        private decimal DeliveryResturant = 0;
+        private decimal DeliveryPilot = 0;
+        private decimal Total = 0;
+
         public OrderGrid(User _user)
         {
             user = _user;
@@ -94,15 +99,7 @@ namespace Market
 
             if (!user.IsAdmin)
             {
-                DeliveryResturantLable.Visible = false;
-                OrderSellLable.Visible = false;
-                TotalLable.Visible = false;
-                deliveryPilotLable.Visible = false;
-
-                deliveryResturant.Visible = false;
-                OrderSell.Visible = false;
-                Total.Visible = false;
-                deliveryPilot.Visible = false;
+                this.btnTotal.Visible = false;
             }
 
             dateTimeFrom.DateTime = DateTime.Today;
@@ -368,6 +365,8 @@ namespace Market
             OrderDetailsForm.ShowDialog();
         }
 
+
+
         private decimal CalcTotal(List<Order> orders)
         {
             decimal sum = 0;
@@ -383,10 +382,11 @@ namespace Market
                     deliverySum += order.DeliveryCost;
             }
 
-            OrderSellLable.Text = sum.ToString();
-            DeliveryResturantLable.Text = (deliverySum * (decimal)0.9).ToString();
-            deliveryPilotLable.Text = (deliverySum * (decimal)0.1).ToString();
-            TotalLable.Text = (sum + deliverySum).ToString();
+            this.OrderSell = sum;
+            this.DeliveryResturant = (deliverySum * (decimal)0.9);
+            this.DeliveryPilot = (deliverySum * (decimal)0.1);
+            this.Total = (sum + deliverySum);
+
             return sum;
         }
 
@@ -439,6 +439,12 @@ namespace Market
                 btnExtractData.Enabled = true;
                 MessageBox.Show("عذرا حدث خطأ ما", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnTotal_Click(object sender, EventArgs e)
+        {
+            OrderGridTotalDetails orderGridTotalDetails = new OrderGridTotalDetails(this.OrderSell, this.DeliveryResturant, this.DeliveryPilot, this.Total);
+            orderGridTotalDetails.ShowDialog();
         }
     }
 }

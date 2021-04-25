@@ -104,3 +104,17 @@ D:\Projects\Market\Market\Market\bin\Debug\Assets\Images\reports.png
 D:\Projects\Market\Market\Market\bin\Debug\Assets\Images\order.png
 D:\Projects\Market\Market\Market\bin\Debug\Assets\Images\village.png
 D:\Projects\Market\Market\Market\bin\Debug\Assets\Images\clients.png
+D:\Projects\Market\Market\Market\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.AccessControl.dll
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.Permissions.dll
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.Principal.Windows.dll
+D:\Projects\Market\Market\Market\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.AccessControl.xml
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.Permissions.xml
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.Principal.Windows.xml
+D:\Projects\Market\Market\Market\obj\Debug\Market.Delayed.resources
+D:\Projects\Market\Market\Market\obj\Debug\Market.DailyCostForm.resources
+D:\Projects\Market\Market\Market\obj\Debug\Market.DailyCostGrid.resources
+D:\Projects\Market\Market\Market\obj\Debug\Market.DailyCostForm.ar-EG.resources
+D:\Projects\Market\Market\Market\obj\Debug\Market.OrderGridTotalDetails.resources
+D:\Projects\Market\Market\Market\obj\Debug\Market.OrderGridTotalDetails.ar-EG.resources

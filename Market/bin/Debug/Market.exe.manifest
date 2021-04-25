@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Market.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Market.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Market" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -162,26 +162,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Market.exe" size="795608">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Market.exe" size="994264">
       <assemblyIdentity name="Market" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/LeJmdAzJwxswLgFQeiYMttyAun4JQdEU2NL/SxE2es=</dsig:DigestValue>
+        <dsig:DigestValue>lBEqOZkXmUpAibWo0PvTq1ZR0IBvw5UqS3m2h7YfiQ0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ar-EG\Market.resources.dll" size="723968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ar-EG\Market.resources.dll" size="1012736">
       <assemblyIdentity name="Market.resources" version="1.0.0.0" language="ar-EG" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dxHg+zBvVZNJ2TkW38ORdZI1tuyndEwnuL0X9C9vM0I=</dsig:DigestValue>
+        <dsig:DigestValue>+FTOXivtMBKmyFQKXvwrBqu+Afd6sPADiir+5PGKu+8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -206,6 +206,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>6WAw/dr354QBVn7oJICtde5I01VhmaP4XA7Gae2sLvQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Configuration.ConfigurationManager.dll" size="84872">
+      <assemblyIdentity name="System.Configuration.ConfigurationManager" version="5.0.0.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>sCqoiJ/6Kbw/dzmHuaqalvni0B32qE005PYvp5cK9Ig=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -245,6 +257,42 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Security.AccessControl.dll" size="33672">
+      <assemblyIdentity name="System.Security.AccessControl" version="5.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>H9pJHuvbGeoKg89sFqtd0AShv9/IRe3gF+vglFvrkn8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Security.Permissions.dll" size="26496">
+      <assemblyIdentity name="System.Security.Permissions" version="5.0.0.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>UHSmYPMWRRNBLlDXON1qV5e4vBthszarmN/8cbDl2Es=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Security.Principal.Windows.dll" size="18312">
+      <assemblyIdentity name="System.Security.Principal.Windows" version="5.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tNjhWtwjXQ6Fjjm1Ez5dAKS6qMlPTznjteeRsPnAyAY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
   <file name="Assets\Images\loader.gif" size="139441">
     <hash>
       <dsig:Transforms>
@@ -254,22 +302,1228 @@
       <dsig:DigestValue>/t0fuCuEOIhC2jdV07jaFDRGr+krxKL5z+XOlizHHog=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Market.exe.config" size="1737">
+  <file name="Infragestics\Infragistics4.Documents.Core.v19.2.dll" size="1260544">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YDngAYXb+l+Owqx2Bbp8CPgi/CkpsEUSEAx6yE1+MEo=</dsig:DigestValue>
+      <dsig:DigestValue>VS2HVN/BWlPkwTlTN6POMC3OR1qm2+gT6eBS6Pp+dB4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="MarketDb.db" size="86016">
+  <file name="Infragestics\Infragistics4.Documents.Core.v19.2.xml" size="149891" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2MY4JxeaAjDDAC/+rwOx/QE7CLyFqO8HHbzlxrSst4k=</dsig:DigestValue>
+      <dsig:DigestValue>97aGp20Hg0oZWY6i+jVbyt8CZCVG7uEHwpj7G8kfc2I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.Excel.v19.2.dll" size="4341760">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3zqpL77YAmRJVRfhQSqPKoZQ4BUSl0lT6wzTID/zZkM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.Excel.v19.2.xml" size="3887852" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cw6ELcDj2w6ucInLsvWLLGJC2oDkkC1iaR/ZWOBEmJ4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.IO.v19.2.dll" size="222208">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IvSwBtnY8xOEA+cleVCdl2RU0dPAhkZ4K6gfxRQwYpg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.IO.v19.2.xml" size="546169" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FCtlFSYWSLtpGChr2jrLmZrpYxAmIvZIwB+Y7rVd+To=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.Reports.v19.2.dll" size="1441792">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ga8ur6dCstyoweL4vaAFagqsEN+kEUp9sMW72PMQfEk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.Reports.v19.2.XML" size="1442092" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AFRkq7tzCYgEUPbcg/0V1k4cQIbKRJLKGIH5rpKFDsM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.TextDocument.CSharp.v19.2.dll" size="450048">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UmUO/DvcotNTPL+JjMRRSc3ewGitwkVds16vdzlqPfU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.TextDocument.CSharp.v19.2.XML" size="100970" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RpJi2k6f45KR+dlzIHknKshwNS3Yj4qzyHwLHkA6d9k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.TextDocument.TSql.v19.2.dll" size="647168">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1GmJV3TDGGkle2qrgFTBhOAVuDNMRhFvOopLw3HsNMc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.TextDocument.TSql.v19.2.XML" size="137206" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sSA4LvuoMUJolJ0NdFdf6V8Acp+2fLdfFc9dA0Bs6U8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.TextDocument.v19.2.dll" size="771072">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ATCX9kMrq/kADVdR3OMQ3BQ4EazphpyMc3neiK3WRKw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.TextDocument.v19.2.XML" size="519419" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aH85f9oOjCl3qVTiuOUD4d+JjpNa95LPSpaunxBETKg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.TextDocument.VisualBasic.v19.2.dll" size="668160">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>617PWEt4OLHEGcbSBVJtGez3JaJPWdkMnqaP3Z4ChEI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.TextDocument.VisualBasic.v19.2.XML" size="141994" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VjDZvVjtJt8G9qauWmFj0gCjKFKXPHlCiAWliWFNKZw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.Word.v19.2.dll" size="44544">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>k+Icbiz79WE3G6d/HH2LkpbgItkTVJ1vdLt5vTo9VaA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Documents.Word.v19.2.xml" size="116318" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2MRk6sKqJqOynwtx8O6jIdYJwJKEf8hnpxhH9FnhSZU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Math.v19.2.dll" size="160768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>e7kign2/L62cQTS63Yv+qI3Tybm2Dw+1/YlB48hWLbY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Math.v19.2.XML" size="609789" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7x/C/Y+pAtnJqwcrfS/yUefG99gq7EoPrUZW+lMMVkk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.Core.v19.2.dll" size="71168">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TOXIzRnnqs0QH8ADbCp/w3DpsdHByhRMkmlVn/1OXhQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.Core.v19.2.XML" size="73278" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>l2+dcfbf0RAPxtuPK/5lwcE9zhfoY0C/BrSHw6+HKHs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataProvider.Adomd.v19.2.dll" size="25088">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iHLVvKzvhh4+ICLbLMySH3XwnDeNHRYMutf5NpK6M4I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataProvider.Adomd.v19.2.XML" size="5368" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hYXHvayG2VqfQJqLRdERCLG+F4l7zaxkEF5nO5h4RqE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataProvider.Flat.v19.2.dll" size="54272">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mj5AJ8CQjK5c/+T1KndQt8dqtBop9oSt0KQ4AVbnk94=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataProvider.Flat.v19.2.XML" size="4602" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>a+JzyHEPOxOt//B+9tEKAoDk4qMVek4aFpRif+uzRiE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataProvider.v19.2.dll" size="37888">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5tmwLIE1R7yClNbo3FybVXXDS+1EF3Fi5hmvJuPyA+4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataProvider.v19.2.XML" size="6418" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tVhlb6F4MToNoakDbt13sNaFd+FF7544pUZPVFOhZtk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataProvider.Xmla.v19.2.dll" size="54784">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>O3fQ9REvWmsgBBt1ooVFlctT7BsmXbjUm832tVLgxQU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataProvider.Xmla.v19.2.XML" size="29169" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lA9je1ROmC7Q3YXNt12qtGs4pqv01UljBLmDG5qfYo0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataSource.Flat.v19.2.dll" size="85504">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lw4ApT5eHmQY5G+mpiOqD6QSRhhiFbU2pgEgO6tPlUs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataSource.Flat.v19.2.XML" size="154083" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mZAd31qALZ8SPx0Ee615BkLD1l3sz9vaLQ4mb4mKnK8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataSource.Mdx.v19.2.dll" size="69632">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bCRp6NFbsaGqLXU7+iMCNtgAGLgNKgV+i+BfbLvaUXI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataSource.Mdx.v19.2.XML" size="67336" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0o2PC8iwPjKGymFBzzJlKR1BHuaulRysdWMgTzNNydA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataSource.v19.2.dll" size="164864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>stNltnpcdqC2Z/+EeNg3PjRM3sqKcNzsAC9PmPmp174=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataSource.v19.2.XML" size="191591" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JIfrE6kXyoi6H20BHFFeu9CTdtav64TvKyvZiiqTGmY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataSource.Xmla.v19.2.dll" size="13312">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gwd2/vAzpO7GjAPXHiZ3NmL12JhrXXyZqIn0zc4D9mE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Olap.DataSource.Xmla.v19.2.XML" size="5187" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>U8wkEIMghNM+QowCuZnkgKeD+uDIWbDVlyTkg3hXbvs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Shared.v19.2.dll" size="286720">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>knTfB6/iFeqZ2XtqYzQvHj0XZtX7DcNT/NSeKEzMuRI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Shared.v19.2.XML" size="439214" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Z1PCqeUwdAqp3ErMK5skC48OqeTpMjGZB7n00et0HG8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Undo.v19.2.dll" size="94208">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vVTJFalrX0qSLlkIY2oNThjZ+E7NR6wQm5qi5u9IYoE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Undo.v19.2.XML" size="137915" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ractcNfHb110McBpsbKVzlw5exMIPGU1oXpOme2AXmI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.AppStylistSupport.v19.2.dll" size="1073152">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zurjrIUWsPIV837EUNC2kj1CQnjjjlVfi0ETHt+0kG8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.AppStylistSupport.v19.2.xml" size="259977" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RdDD0p14+RiqvCgHpusXiNEhyQCPurV5XNvh+wtj1+8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.Barcode.v19.2.dll" size="552960">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DMtfPhmjOxwvWMSjVFaG+kSs/+H7UE357xgjI3Iwbfc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.Barcode.v19.2.XML" size="298709" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EAp6LM5pK0PHc5wUL/4PHVfSMe0f65OyKGL8IEJewfI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.Shared.v19.2.dll" size="1527808">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>loOM2dppraxJiZ2t0mpaEuEoxYiETLYSDT543PaGsTw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.Shared.v19.2.XML" size="983398" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9D3z0IBZN4p2+F62thflnvjTuqjO+T0c5tx8x03XVjc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.UltraDataChart.v19.2.dll" size="2610688">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Jx0o5oL+uPi+omAORRJ/TiDF4t9qzjb5benT6TeQEXo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.UltraDataChart.v19.2.XML" size="3702372" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1ODPYblt3pzr1hiL+p0yIxAhxm6kTvKuvkFAb4PCfmA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.UltraGauges.v19.2.dll" size="410112">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EHff1UWS3IgGfk4OaZH4SV9px4lxVoxXBfVAsEmsqp8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.UltraGauges.v19.2.xml" size="546386" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QqpCzlnbZ+y2vGUwHiY5JS+uJZ661dOIyqI7LZdrb/g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.UltraGeographicMap.v19.2.dll" size="138752">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VGnQQ8mbIAVKSIX+PDPwupY2r2nIkZJcl6bF66MWSkc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.UltraGeographicMap.v19.2.XML" size="219095" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2jwgJLBuABqXV9MIA9mvmOIwhLKIlAHsmr2kWEUumJU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.UltraSparkline.v19.2.dll" size="120832">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wP9RFwM67MuKmr6gqEa7/R4L1TQy3rdqc4sz71crAXM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.DataVisualization.UltraSparkline.v19.2.XML" size="115400" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wXQx7A1UpEweLb8FUaNuQHBN+2uP+aJR5z7Jt77UFqw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.Misc.v19.2.dll" size="1232896">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Sj/QCOgz/43Kb6gXEDakO32atjD+g3PduLHlHx78oxY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.Misc.v19.2.xml" size="2481689" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>my3wFzmtHAObkJ2t6SLSsSGE1bh6c+fTmDX8NMcyY7Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.Portable.Core.v19.2.dll" size="107520">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iUn3EkYvMG5lEAtgGh9RQwhe7EleQBfHZ1tIIA7tO5o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.Portable.Core.v19.2.XML" size="125796" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zGpq1Uo8dMYPX/8+KOLxNtaWtp+7mQuQDfZDC4rBubs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.SupportDialogs.v19.2.dll" size="1171456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rAqi3l96iBjCVOXlCN+OX0S5M8nUdkqxXUJF3A5RY+k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.SupportDialogs.v19.2.XML" size="388405" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4/5R2Ejk7fEssGoWhW8xDe9AhWFpAUZy5FIiWBVwQ3Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraChart.v19.2.Design.dll" size="2215936">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iRLz+BL3Vvr4nyv58qisy2q7OYfj8kPyX0pjBuaa9hw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraGauge.v19.2.Design.dll" size="1287680">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eN2rcKOvg4b3wB2ro4c/XgmZZDB+h0y3hszlUPyhJos=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinCalcManager.v19.2.dll" size="512000">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WtitHlU8PePM0DPseO8rCOR5LoCd1Kj2f+XnmUtKhn0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinCalcManager.v19.2.FormulaBuilder.dll" size="172032">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eVbYWWN07ITskQPCyqZmolcOnS0Q4LgMvfPKlS6H7lI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinCalcManager.v19.2.FormulaBuilder.xml" size="17725" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xMo4QGIHdHQFZwg1NMWAWAsIce+dFVvzdIQpBF8jcOY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinCalcManager.v19.2.xml" size="994731" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OdspuRlaq+qKnIRgIKTVWou35hUV6oAsvmIejFCvaY8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinCarousel.v19.2.dll" size="245760">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gFmYfHcgHqf7EK0tLY3QK6YlnN5n7WnnI5kHkUGxuR4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinCarousel.v19.2.XML" size="366329" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Y02LbruvFax2OrLpAlDsYXk+DTZVXK7kvBrlCrQkj2Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinChart.v19.2.dll" size="1753088">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/K8Yq8raQicUFrFqAkBzX85ZsgDSImFvgCGUiHXJal4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinChart.v19.2.XML" size="2947620" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oiZc5ripPntA8O/fTFm2g/uct1iOZTJsu6djraqAQHI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinDataSource.v19.2.dll" size="114688">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TpV42PFe3s/N0zNQiiTJ4UpyWaOXyEAdsZVJN9P0PpE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinDataSource.v19.2.XML" size="215796" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>F0MBxiYP7MgLuc/JSkEFjt8kpQ8lGnzuCL8jhgS7YYc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinDock.v19.2.dll" size="782336">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UxdQ+Ams5LAxL6h9Ybb5qWryHODRiB/jXfktPdPZjIQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinDock.v19.2.xml" size="806822" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RNZ/qpcj7+Ec/RY0PwQB7gPLtbiFYqfavXMQRytKDRI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinEditors.v19.2.dll" size="548864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4IlBWWBhjnbsvZ0+0Sl8NvP0+m4JeBisw88fkJ0+4Gw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinEditors.v19.2.xml" size="1209715" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7Gm2ljxvVr4CCTfFFREK1gXnddIDHiYXy70O29Q5fE8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinExplorerBar.v19.2.dll" size="737280">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ldvItrajfTuC/5C1tC4pkTRIbTAAFqYC7QbStNmJYyY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinExplorerBar.v19.2.XML" size="1343365" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>36JEL3BG+CM53kB2JV8zurmiqDdg33awSUPIvUxUH1c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinFormattedText.WordWriter.v19.2.dll" size="57344">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HB+gvtMu8CTS5hYPR0ycEa7AcmQRqXOfdHzsUuNcDqU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinFormattedText.WordWriter.v19.2.XML" size="28308" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>C34NYxLskhjiPHqv4VzMuIyjn/n3ckMyU9Skky4dVC0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGanttView.v19.2.dll" size="491520">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EI29jzpTU1C+tZvGmvf34J8A/geclg6fJF6fOXEAOls=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGanttView.v19.2.XML" size="521533" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ogMPhDj+0s86PBUA1meYPJ+Ty+iGOuspcGRmtnDqFOo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGauge.v19.2.dll" size="418816">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ULtKOkRTkD9xCEx5tlV1f5mxCsiVIDPlWtc/sfu/EYE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGauge.v19.2.xml" size="456992" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wMMhqILZeP2j62o+Br5ZH6iTtGmfN+TtanrBd2/P2oc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGrid.DocumentExport.v19.2.dll" size="143360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LdNIJMGUVI9fLYlnSTLgg/JLU2w0TrZxwEfkarzWlg8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGrid.DocumentExport.v19.2.XML" size="144208" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>amI0ceLjpUbXYzXfjhxhST8iiYiIY/dQYPA7YyfWUVU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGrid.ExcelExport.v19.2.dll" size="147456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Gpzz+PfSkcIBcs71QdmNf8JZXjFQgtE65YneNl06zGk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGrid.ExcelExport.v19.2.XML" size="118758" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tkldkmiZUaN7I9GrwmdI6tHXe0SHJRIjVdTWjjNRG30=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGrid.v19.2.dll" size="2510848">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wHQlsPl+aDV8z5ff9NOJ7oPecMQfX0xnsa5/as8SFXc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGrid.v19.2.XML" size="3879203" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zlfcj5iavKwjJ/7B1pv3EaBhzcYPtxPFCrs4C1g/Qrk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGrid.WordWriter.v19.2.dll" size="114688">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MNgxPQUNESx+03xoibYwl66TskGXEb+STiU7Ia/zDkM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinGrid.WordWriter.v19.2.XML" size="71909" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>r3bNR45ssw9ZE4p/mXsDfsc+lQ6/vZKDrDv9kngGz8Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinInkProvider.Ink17.v19.2.dll" size="217088">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JDiwIk18+VfnQ5SObTOB3GddYpCn8XAA0W3W89iTeBY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinInkProvider.Ink17.v19.2.XML" size="227195" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>O4zf8Xy2VPFVedN4F1kw3K2LGGhx1oaGdAGKKi/0epg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinListBar.v19.2.dll" size="102400">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Kk3DQBTA6InHDOlW3QtBJgXhKKX56ljD6mqpAM7l+LU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinListBar.v19.2.XML" size="152448" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kjKKNAYE1DiYjq+qSTRWBLZ3jHiXcc1NCBMCzxf4GXM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinListView.v19.2.dll" size="372736">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xqGbqOAyR8y9M1Q/ulISmJEZhgafyPMlzvxlqG3mw70=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinListView.v19.2.XML" size="834751" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sEq29yMB1w3jdtbJw1QTTUsEBeQXGt6wTIMlTg3aBL8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinLiveTileView.v19.2.dll" size="569344">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yZfghDpDxZE4IXjpb64cFXChNHsV57TKHNJgpsYjKt4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinLiveTileView.v19.2.XML" size="974064" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VK7zmleVL9JTjTLnkR9X1qcsbONaUGnNYp+V1Ps4RIk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinMaskedEdit.v19.2.dll" size="98304">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TJGJl42WP8oPC5erq18tWmAxAX2TaUHJxlbMIOMSn6E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinMaskedEdit.v19.2.xml" size="125553" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FccYTgwfP30qAyr/TkBEdpWm6s6zejMdadctTonBT4s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinOfficeNavBar.v19.2.dll" size="217088">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JDm/wPybnuB01fnQheo9nZqLysJf75bzYGvtXrCvcco=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinOfficeNavBar.v19.2.XML" size="240361" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Nqvj3QHbzThTEgyzjZ3HBEWJkRyMFlxGcwpGTQmVRf8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinPivotGrid.v19.2.dll" size="466944">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>p14cQUyJiMKpJ9k1TAVyEUgwOosI1hCt2uwRnLgG9BY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinPivotGrid.v19.2.XML" size="400856" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NGjRwkrzp74lscFkxaKhMgCoJb9Ab6MLcg5C0vlfiCU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinPrintPreviewDialog.v19.2.dll" size="176128">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VPp8mNyP1PjVXCHjTa1igNut+H0LwgzuUpkjsXaGu+Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinPrintPreviewDialog.v19.2.XML" size="69422" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EB6T+QWJMxAJSJVCtlhaEj8v0kTY1VkeNQEWlGPd53U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinRadialMenu.v19.2.dll" size="626688">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2KE3uMIunEBwMBhJQkjU0zJYJZepF4cX8xGo0SY/O5U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinRadialMenu.v19.2.XML" size="517973" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wHTE65rLK1M0LlooCWGcynNbGYklwAKXGYMJtHnqGl0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinSchedule.v19.2.dll" size="2531328">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LU5t42BlcbMTuQ5pXtZkZHEGk6D7s4LnZDbCb7SNJa8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinSchedule.v19.2.xml" size="5023447" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3FQaj3NJAZdArspS99s0JW58xFIfqV30oON8dXuASTs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinSpellChecker.v19.2.dll" size="905216">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GvgKEINUKKap6psuH9L7QBsTK8LcMhyeAams+5kVYWQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinSpellChecker.v19.2.xml" size="197222" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rdj9V18iWgxWC8/isAXuERCfmkh8aeFUjs5i1qXDBuk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinSpreadsheet.ChartAdapter.v19.2.dll" size="86016">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>brNbtVgXuc1b4yus7Y8zF9XBaWUD5pThtl5KrggIL+g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinSpreadsheet.ChartAdapter.v19.2.XML" size="694" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oU4vtdI/YniY/BOjiNgUUZt8xLGaPm+1kwtpQIF34tY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinSpreadsheet.v19.2.dll" size="1523712">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kVXT/T4nLuLn7v5qsDi9+2Yktgvgmu0V2iFJLN60e/U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinSpreadsheet.v19.2.XML" size="1095222" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>F4dXXeFQqblTyXH7eTbkvcQM2YAzJAlZx3K+FPDCyJ4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinStatusBar.v19.2.dll" size="229376">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NqBSS/MAZjo8rAztWiGFTdd6v/TBlgX3Tak0sZWSA8Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinStatusBar.v19.2.xml" size="276561" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kk/6uU7qc7R1fZmV04tI50pBQac48QwPZMIIyawc93Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinTabbedMdi.v19.2.dll" size="327680">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jhUPhYxSPvzuly+t3ZOIL0o1+QQdsU94ICQ2KRXjZu0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinTabbedMdi.v19.2.xml" size="659105" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iolWYUuM4DB2Vw3GTv6xx/oQPdjGXYTnV8XkNkVNdow=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinTabControl.v19.2.dll" size="286720">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/IYg57IJpVLdn9Rwh6ef3Qt1ESPN3LJ8q8L5Yl8oWk0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinTabControl.v19.2.xml" size="402148" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>X1gU43JdUlfoDjtboK5mqFateKGH/ojw1vBlhSglVOc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinToolbars.v19.2.dll" size="3358720">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hnaVcWVr2eMYcZ1cCPXwljUtrQkktE5sPz+SLv5Mi7c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinToolbars.v19.2.xml" size="3951209" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TasNcJ09NeNpf5NUiIdI7dazgwz+Ziiixqmkzb4zmOI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinTree.v19.2.dll" size="1331200">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>scAjpLGpA/ItvFPMyUqS1J93LDl/DAJZ5260eFOTcio=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.UltraWinTree.v19.2.XML" size="1389327" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>I0F87szKTib78RH1CZeV8YPIxRoijQWeBNLDBPBW7xc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.v19.2.Design.dll" size="9306112">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eS4zR6ZBzzPJwHlpgAcc9ME9FAVTtM+NNUPYFy9uDxY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.v19.2.Design.XML" size="1271641" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jbAuEBi/3KBNvYa2YnFpRWmh4MpkNnaWv7MmzEQu0SQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.v19.2.dll" size="5402624">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nziS/Cjf1b2m7OSEJsws72nCQ04gW8qmK3ho5BjPak8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infragestics\Infragistics4.Win.v19.2.XML" size="7052247" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BOXjOYWnhxnZaS47BspuwcmBmtcdMP7KYm2fYmUAgwA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Market.exe.config" size="1718">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5xzqLtoY0drEQ88yHaDDrJqbPshHlnO97Kb/eglnriI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MarketDb.db" size="94208">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vdKAUhOeJ3mTaEiKGBC3R+6gJiWaixt9vJGOZ3pprQw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="MetroFramework.txt" size="1266">

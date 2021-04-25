@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\DailyCost.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="ClientsForm.cs">
@@ -143,6 +144,12 @@
     </Compile>
     <Compile Include="ClientsForm.Designer.cs">
       <DependentUpon>ClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderGridTotalDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderGridTotalDetails.Designer.cs">
+      <DependentUpon>OrderGridTotalDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderDetailsForm.cs">
       <SubType>Form</SubType>
@@ -155,6 +162,12 @@
     </Compile>
     <Compile Include="Delayed.Designer.cs">
       <DependentUpon>Delayed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyCostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyCostForm.Designer.cs">
+      <DependentUpon>DailyCostForm.cs</DependentUpon>
     </Compile>
     <Compile Include="VillagesForm.cs">
       <SubType>Form</SubType>
@@ -185,6 +198,12 @@
     </Compile>
     <Compile Include="ClientsGrid.Designer.cs">
       <DependentUpon>ClientsGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyCostGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyCostGrid.Designer.cs">
+      <DependentUpon>DailyCostGrid.cs</DependentUpon>
     </Compile>
     <Compile Include="VillagesGrid.cs">
       <SubType>Form</SubType>
@@ -233,6 +252,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Assets\Images\money.png" />
+    <None Include="Assets\Images\cost.jpg" />
     <Content Include="Infragestics\Infragistics4.Documents.Core.v19.2.dll" />
     <Content Include="Infragestics\Infragistics4.Documents.Core.v19.2.xml" />
     <Content Include="Infragestics\Infragistics4.Documents.Excel.v19.2.dll" />
@@ -374,6 +394,12 @@
     <EmbeddedResource Include="ClientsForm.resx">
       <DependentUpon>ClientsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderGridTotalDetails.ar-EG.resx">
+      <DependentUpon>OrderGridTotalDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderGridTotalDetails.resx">
+      <DependentUpon>OrderGridTotalDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderDetailsForm.ar-EG.resx">
       <DependentUpon>OrderDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +408,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Delayed.resx">
       <DependentUpon>Delayed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyCostForm.ar-EG.resx">
+      <DependentUpon>DailyCostForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyCostForm.resx">
+      <DependentUpon>DailyCostForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VillagesForm.ar-EG.resx">
       <DependentUpon>VillagesForm.cs</DependentUpon>
@@ -403,6 +435,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientsGrid.resx">
       <DependentUpon>ClientsGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyCostGrid.resx">
+      <DependentUpon>DailyCostGrid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VillagesGrid.resx">
       <DependentUpon>VillagesGrid.cs</DependentUpon>

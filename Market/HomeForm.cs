@@ -82,5 +82,13 @@ namespace Market
             Delayed delayed = new Delayed(user);
             delayed.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            DailyCostGrid dailyCostGrid = new DailyCostGrid(user);
+            dailyCostGrid.ShowDialog();
+        }
     }
 }
