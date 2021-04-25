@@ -360,6 +360,12 @@ namespace Market
 
         private void btnDetails_Click(object sender, EventArgs e)
         {
+            if (selectedRow == null)
+            {
+                MessageBox.Show("يجب اختيار اوردر اولا", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var order = Orders.FirstOrDefault(x => x.OrderId == (int)selectedRow.Cells[1].Value);
             OrderDetailsForm OrderDetailsForm = new OrderDetailsForm(user, order);
             OrderDetailsForm.ShowDialog();
