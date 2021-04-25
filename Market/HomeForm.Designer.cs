@@ -37,7 +37,7 @@ namespace Market
             this.label1 = new System.Windows.Forms.Label();
             this.btnClients = new System.Windows.Forms.Button();
             this.btnDelayedFormShow = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCosts = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -108,13 +108,13 @@ namespace Market
             this.btnDelayedFormShow.UseVisualStyleBackColor = false;
             this.btnDelayedFormShow.Click += new System.EventHandler(this.btnDelayedFormShow_Click);
             // 
-            // button1
+            // btnCosts
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCosts.BackColor = System.Drawing.Color.MediumSlateBlue;
+            resources.ApplyResources(this.btnCosts, "btnCosts");
+            this.btnCosts.Name = "btnCosts";
+            this.btnCosts.UseVisualStyleBackColor = false;
+            this.btnCosts.Click += new System.EventHandler(this.btnCosts_Click);
             // 
             // pictureBox7
             // 
@@ -123,6 +123,7 @@ namespace Market
             this.pictureBox7.Image = global::Market.Properties.Resources.cost;
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.btnCosts_Click);
             // 
             // pictureBox6
             // 
@@ -183,7 +184,7 @@ namespace Market
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCosts);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.btnDelayedFormShow);
             this.Controls.Add(this.pictureBox5);
@@ -231,7 +232,7 @@ namespace Market
         private System.Windows.Forms.Button btnClients;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnDelayedFormShow;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCosts;
         private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

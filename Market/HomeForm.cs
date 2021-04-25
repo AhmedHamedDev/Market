@@ -83,7 +83,7 @@ namespace Market
             delayed.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCosts_Click(object sender, EventArgs e)
         {
             this.Hide();
 

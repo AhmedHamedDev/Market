@@ -129,16 +129,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnProductTypesFormShow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 108</value>
+    <value>15, 86</value>
   </data>
   <data name="btnProductTypesFormShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="btnProductTypesFormShow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 15</value>
+    <value>0, 0, 0, 12</value>
   </data>
   <data name="btnProductTypesFormShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 235</value>
+    <value>211, 186</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnProductTypesFormShow.TabIndex" type="System.Int32, mscorlib">
@@ -175,16 +175,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnReportsFormShow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 108</value>
+    <value>243, 86</value>
   </data>
   <data name="btnReportsFormShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="btnReportsFormShow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 15</value>
+    <value>0, 0, 0, 12</value>
   </data>
   <data name="btnReportsFormShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 235</value>
+    <value>211, 186</value>
   </data>
   <data name="btnReportsFormShow.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -220,16 +220,16 @@
     <value>NoControl</value>
   </data>
   <data name="brnOrdersFormShow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 373</value>
+    <value>15, 295</value>
   </data>
   <data name="brnOrdersFormShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="brnOrdersFormShow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 15</value>
+    <value>0, 0, 0, 12</value>
   </data>
   <data name="brnOrdersFormShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 235</value>
+    <value>211, 186</value>
   </data>
   <data name="brnOrdersFormShow.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -265,16 +265,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnVillagesFormShow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 373</value>
+    <value>243, 295</value>
   </data>
   <data name="btnVillagesFormShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="btnVillagesFormShow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 15</value>
+    <value>0, 0, 0, 12</value>
   </data>
   <data name="btnVillagesFormShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 235</value>
+    <value>211, 186</value>
   </data>
   <data name="btnVillagesFormShow.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -313,13 +313,16 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 9</value>
+    <value>406, 7</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="label1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 90</value>
+    <value>168, 73</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -349,16 +352,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnClients.Location" type="System.Drawing.Point, System.Drawing">
-    <value>658, 108</value>
+    <value>470, 86</value>
   </data>
   <data name="btnClients.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="btnClients.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 15</value>
+    <value>0, 0, 0, 12</value>
   </data>
   <data name="btnClients.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 235</value>
+    <value>211, 186</value>
   </data>
   <data name="btnClients.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -394,16 +397,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnDelayedFormShow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>658, 373</value>
+    <value>470, 295</value>
   </data>
   <data name="btnDelayedFormShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="btnDelayedFormShow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 15</value>
+    <value>0, 0, 0, 12</value>
   </data>
   <data name="btnDelayedFormShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 235</value>
+    <value>211, 186</value>
   </data>
   <data name="btnDelayedFormShow.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -429,49 +432,49 @@
   <data name="&gt;&gt;btnDelayedFormShow.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnCosts.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnCosts.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cairo, 25.8pt, style=Bold</value>
   </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnCosts.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>979, 108</value>
+  <data name="btnCosts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>699, 86</value>
   </data>
-  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+  <data name="btnCosts.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
   </data>
-  <data name="button1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 15</value>
+  <data name="btnCosts.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 12</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 235</value>
+  <data name="btnCosts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 186</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnCosts.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="btnCosts.Text" xml:space="preserve">
     <value>مصاريف</value>
   </data>
-  <data name="button1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="btnCosts.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
   </data>
-  <data name="button1.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+  <data name="btnCosts.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;btnCosts.Name" xml:space="preserve">
+    <value>btnCosts</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnCosts.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnCosts.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnCosts.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="pictureBox7.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
@@ -481,10 +484,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1050, 119</value>
+    <value>750, 94</value>
+  </data>
+  <data name="pictureBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 136</value>
+    <value>109, 108</value>
   </data>
   <data name="pictureBox7.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -511,10 +517,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 392</value>
+    <value>510, 310</value>
+  </data>
+  <data name="pictureBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 128</value>
+    <value>124, 101</value>
   </data>
   <data name="pictureBox6.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -541,10 +550,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>692, 119</value>
+    <value>494, 94</value>
+  </data>
+  <data name="pictureBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 136</value>
+    <value>161, 108</value>
   </data>
   <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -571,10 +583,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 392</value>
+    <value>283, 310</value>
+  </data>
+  <data name="pictureBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 128</value>
+    <value>124, 101</value>
   </data>
   <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -601,10 +616,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 392</value>
+    <value>55, 310</value>
+  </data>
+  <data name="pictureBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 128</value>
+    <value>124, 101</value>
   </data>
   <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -631,10 +649,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 119</value>
+    <value>283, 94</value>
+  </data>
+  <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 136</value>
+    <value>124, 108</value>
   </data>
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -661,10 +682,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 119</value>
+    <value>55, 94</value>
+  </data>
+  <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 136</value>
+    <value>124, 108</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -688,25 +712,22 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 24</value>
+    <value>5, 19</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1304, 641</value>
+    <value>931, 507</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cairo, 7.8pt</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>18, 30, 18, 30</value>
+    <value>13, 24, 13, 24</value>
   </data>
   <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>
