@@ -39,6 +39,7 @@ namespace Market
             Infragistics.Win.ValueListItem valueListItem4 = new Infragistics.Win.ValueListItem();
             this.OrdersDataGrid = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTotal = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioDelayed = new System.Windows.Forms.RadioButton();
             this.radioPaied = new System.Windows.Forms.RadioButton();
@@ -65,7 +66,6 @@ namespace Market
             this.txtboxOrderNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
-            this.btnTotal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -137,6 +137,21 @@ namespace Market
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1344, 291);
             this.panel1.TabIndex = 0;
+            // 
+            // btnTotal
+            // 
+            this.btnTotal.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTotal.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTotal.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnTotal.Location = new System.Drawing.Point(256, 224);
+            this.btnTotal.Name = "btnTotal";
+            this.btnTotal.Size = new System.Drawing.Size(117, 45);
+            this.btnTotal.TabIndex = 65;
+            this.btnTotal.Text = "الاجمالى";
+            this.btnTotal.UseVisualStyleBackColor = false;
+            this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
             // 
             // groupBox2
             // 
@@ -285,7 +300,7 @@ namespace Market
             this.dateTimeTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimeTo.Font = new System.Drawing.Font("Cairo", 10.2F);
             this.dateTimeTo.FormatProvider = new System.Globalization.CultureInfo("ar-EG");
-            this.dateTimeTo.Location = new System.Drawing.Point(459, 173);
+            this.dateTimeTo.Location = new System.Drawing.Point(519, 173);
             this.dateTimeTo.MaskInput = "{date} {time}";
             this.dateTimeTo.Name = "dateTimeTo";
             this.dateTimeTo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -336,7 +351,7 @@ namespace Market
             this.label4.Font = new System.Drawing.Font("Cairo", 18F);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(717, 162);
+            this.label4.Location = new System.Drawing.Point(777, 162);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(82, 56);
@@ -375,7 +390,7 @@ namespace Market
             valueListItem2,
             valueListItem3,
             valueListItem4});
-            this.comboGeneralProductType.Location = new System.Drawing.Point(459, 14);
+            this.comboGeneralProductType.Location = new System.Drawing.Point(519, 14);
             this.comboGeneralProductType.Name = "comboGeneralProductType";
             this.comboGeneralProductType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboGeneralProductType.Size = new System.Drawing.Size(252, 44);
@@ -400,7 +415,7 @@ namespace Market
             this.label7.Font = new System.Drawing.Font("Cairo", 18F);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(717, 4);
+            this.label7.Location = new System.Drawing.Point(777, 4);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(98, 56);
@@ -426,7 +441,7 @@ namespace Market
             this.comboClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboClient.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
             this.comboClient.Font = new System.Drawing.Font("Cairo", 10.8F);
-            this.comboClient.Location = new System.Drawing.Point(459, 92);
+            this.comboClient.Location = new System.Drawing.Point(519, 92);
             this.comboClient.Name = "comboClient";
             this.comboClient.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboClient.Size = new System.Drawing.Size(252, 44);
@@ -440,7 +455,7 @@ namespace Market
             this.clientLable.Font = new System.Drawing.Font("Cairo", 18F);
             this.clientLable.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.clientLable.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.clientLable.Location = new System.Drawing.Point(717, 79);
+            this.clientLable.Location = new System.Drawing.Point(777, 79);
             this.clientLable.Name = "clientLable";
             this.clientLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.clientLable.Size = new System.Drawing.Size(125, 56);
@@ -485,21 +500,6 @@ namespace Market
             this.label1.Size = new System.Drawing.Size(171, 56);
             this.label1.TabIndex = 3;
             this.label1.Text = "رقم الاوردر :";
-            // 
-            // btnTotal
-            // 
-            this.btnTotal.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTotal.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTotal.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnTotal.Location = new System.Drawing.Point(256, 224);
-            this.btnTotal.Name = "btnTotal";
-            this.btnTotal.Size = new System.Drawing.Size(117, 45);
-            this.btnTotal.TabIndex = 65;
-            this.btnTotal.Text = "الاجمالى";
-            this.btnTotal.UseVisualStyleBackColor = false;
-            this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
             // 
             // OrderGrid
             // 

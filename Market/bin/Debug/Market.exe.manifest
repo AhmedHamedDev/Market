@@ -162,14 +162,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Market.exe" size="757208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Market.exe" size="759768">
       <assemblyIdentity name="Market" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>C0HUKDIguXVEJBIzFsoDCLcUZALlHJZ4YinEg58zt2Q=</dsig:DigestValue>
+        <dsig:DigestValue>XVG1PG0p7IAA1cC31D1JfBrrmNw+me/6zSSaq+4p0bA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -181,7 +181,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>czwZXgBw1q+YsYZAQ1GK10zOF+44lALVcX4eLrlm3mE=</dsig:DigestValue>
+        <dsig:DigestValue>qN6V435JBrC0ukegLwJ3jOFlpE1BLBGVPAFTlYegp3U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
