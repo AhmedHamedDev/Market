@@ -4,17 +4,17 @@
   <description asmv2:publisher="Market" asmv2:product="Market" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.6" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Market.exe.manifest" size="79692">
+    <dependentAssembly dependencyType="install" codebase="Market.exe.manifest" size="76824">
       <assemblyIdentity name="Market.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6cnEAdsHnt16lrQG+wIWyd4cDON9KlmRntJbMpOGmlc=</dsig:DigestValue>
+        <dsig:DigestValue>0sMUKrLPv6VNpn/hJSXVl0JFQ8h8FSqzL1sgs+turCs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
