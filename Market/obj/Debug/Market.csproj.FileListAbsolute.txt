@@ -109,3 +109,12 @@ D:\Projects\Market\Market\Market\obj\Debug\Market.application
 D:\Projects\Market\Market\Market\obj\Debug\Market.csproj.CopyComplete
 D:\Projects\Market\Market\Market\obj\Debug\Market.exe
 D:\Projects\Market\Market\Market\obj\Debug\Market.pdb
+D:\Projects\Market\Market\Market\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.AccessControl.dll
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.Permissions.dll
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.Principal.Windows.dll
+D:\Projects\Market\Market\Market\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.AccessControl.xml
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.Permissions.xml
+D:\Projects\Market\Market\Market\bin\Debug\System.Security.Principal.Windows.xml
+D:\Projects\Market\Market\Market\obj\Debug\Market.csprojAssemblyReference.cache
