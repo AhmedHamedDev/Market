@@ -508,10 +508,10 @@
     <value>Cairo, 10.2pt</value>
   </data>
   <data name="comboBoxGeneralType.Items" xml:space="preserve">
-    <value>مشروبات</value>
+    <value>مأكولات</value>
   </data>
   <data name="comboBoxGeneralType.Items1" xml:space="preserve">
-    <value>مأكولات</value>
+    <value>مشروبات</value>
   </data>
   <data name="comboBoxGeneralType.Items2" xml:space="preserve">
     <value>شيشه</value>

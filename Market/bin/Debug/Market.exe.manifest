@@ -169,7 +169,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XVG1PG0p7IAA1cC31D1JfBrrmNw+me/6zSSaq+4p0bA=</dsig:DigestValue>
+        <dsig:DigestValue>oa6cW+b7vCi6oJ9mB6VqsPt7GNG8wnEEKZk7eCjWHAw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -181,7 +181,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qN6V435JBrC0ukegLwJ3jOFlpE1BLBGVPAFTlYegp3U=</dsig:DigestValue>
+        <dsig:DigestValue>36jTOhIJH35+IlbdH16kOOm+oLqIy5q1wREr1r9tFcs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1523,7 +1523,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>LYLYiMhgYUneOa1XKN8YLzVeNJXfJfOA30OHAQ9K8kQ=</dsig:DigestValue>
+      <dsig:DigestValue>/0tM024E1N/x76vRJH20DcZEyWbgBg+dUId7488IaCI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="MetroFramework.txt" size="1266">
